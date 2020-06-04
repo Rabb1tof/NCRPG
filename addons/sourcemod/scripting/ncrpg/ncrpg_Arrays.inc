@@ -22,10 +22,10 @@ int GetSkillArrayPosition(int skillid) {
 }
 
 int GetPlayerArrayPosition(int client) {
-	int aSize = GetArraySize(GetPlayersArrayHandle());
+	int aSize = GetArraySize(hArrayPlayers);
 	for(int pos = 0; pos < aSize; ++pos)
 	{
-		if(client == GetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_PLAYER_INDEX))
+		if(client == GetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_PLAYER_INDEX))
 			return pos;
 	}
 	
@@ -33,14 +33,10 @@ int GetPlayerArrayPosition(int client) {
 }
 
 void CreatePlayersArray() {
-	if(GetPlayersArrayHandle() != null) GetPlayersArrayHandle().Close();
+	if(hArrayPlayers != null) hArrayPlayers.Close();
 	
 	if((hArrayPlayers = CreateArray()) == null)
 		NCRPg_LogPrint(LogType_FailState, "Could not create an array of players");
-	
+		
 	LoadAllPlayers();
-}
-
-Handle GetPlayersArrayHandle() {
-	return hArrayPlayers;
 }
