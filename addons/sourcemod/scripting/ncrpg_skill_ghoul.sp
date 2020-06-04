@@ -41,7 +41,7 @@ public void OnClientPutInServer(int client) {
 }
 
 public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int victim = GetClientOfUserId(event.GetInt("userid"));
 	if(IsValidPlayer(victim))
 	{

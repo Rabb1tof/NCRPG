@@ -51,7 +51,7 @@ public void OnMapStart() {
 	NCRPG_Configs RPG_Configs = NCRPG_Configs(ThisSkillShortName,CONFIG_SKILL);
 	cfg_fPercent = RPG_Configs.GetFloat(ThisSkillShortName,"percent",0.6);
 	cfg_bStatTime = RPG_Configs.GetInt(ThisSkillShortName,"stattime",0)?true:false;
-	cfg_fTime	 = RPG_Configs.GetFloat(ThisSkillShortName,"stattime",0.3);
+	cfg_fTime	 = RPG_Configs.GetFloat(ThisSkillShortName,"time",0.3);
 	cfg_bFreeze = RPG_Configs.GetInt(ThisSkillShortName,"freeze",1)?true:false;
 	cfg_fSlow = RPG_Configs.GetFloat(ThisSkillShortName,"slow",0.06);
 	cfg_bSumm = RPG_Configs.GetInt(ThisSkillShortName,"sum",1)?true:false;
@@ -85,9 +85,15 @@ public void NCRPG_OnPlayerSpawn(int client) { KillAttackerTimers(client,false); 
 public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDamage, OnTakeDamage); }
 
 public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return Plugin_Continue;
+	//PrintToChatAll("-1");	
+	if(!NCRPG_IsValidSkill(ThisSkillID)) 
+	{
+		//PrintToChatAll("-0");	
+		return Plugin_Continue;
+	}
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && victim != attacker)
 	{
+		//PrintToChatAll("0");	
 		if(GetClientTeam(victim) == GetClientTeam(attacker))
 			return Plugin_Continue;
 		
@@ -99,11 +105,12 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 		bool wpn = IsPermittedWeapon(buffer);
 		
 		if(cfg_bRestrict && IsAttackerInArray(victim, attacker))
-		{				
+		{		
+			//PrintToChatAll("1");		
 			if(!wpn)
 			{
-				if(IsPlayerAlive(attacker)) // other plugins
-					ForcePlayerSuicide(attacker);
+				//if(IsPlayerAlive(attacker)) // other plugins
+				//	ForcePlayerSuicide(attacker);
 				
 				return Plugin_Handled;
 			}
@@ -112,6 +119,7 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 		int level = NCRPG_GetSkillLevel(attacker, ThisSkillID);
 		if(IsPlayerFrozenInternal(victim))
 		{
+			//PrintToChatAll("2");
 			if(!wpn)
 				damage *= cfg_fPercent;
 			
@@ -134,10 +142,14 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 		}
 		
 		if(cfg_bFrozenRest && IsPlayerFrozenInternal(attacker))
+		{
+			//PrintToChatAll("3");
 			return Plugin_Changed;
+		}
 		
 		if(inflictor == attacker)
 		{
+			//PrintToChatAll("4");
 			if(IsAcitveWeaponPistol(attacker))
 			{
 				if(level > 0)
@@ -148,10 +160,12 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 					int array[Freezing];
 					if(cfg_bFreeze)
 					{
+						//PrintToChatAll("5");
 						NCRPG_FreezePlayer(victim, time);
 					}
 					else
 					{
+						//PrintToChatAll("6");
 						array[UnslowTimer] = NCRPG_SlowPlayer(victim, cfg_fSlow*level, time);
 					}
 					

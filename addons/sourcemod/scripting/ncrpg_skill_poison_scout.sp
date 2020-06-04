@@ -53,14 +53,19 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 {
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && victim != attacker && GetClientTeam(attacker) != GetClientTeam(victim))
 	{
-		char buffer[PLATFORM_MAX_PATH*2];
-		GetClientWeapon(attacker, buffer, sizeof buffer);
-		bool wpn = IsPermittedWeapon(buffer);
-		if(!wpn) return Plugin_Continue;
-		int level = NCRPG_GetSkillLevel(attacker, ThisSkillID);
-		if(level>0 && GetRandomFloat(0.0,100.0) < level*cfg_fChance)
+		//PrintToConsoleAll("%d", damagetype);
+		if(damagetype & DMG_BULLET > 0)
 		{
-			PoisonAttack(attacker,victim,cfg_iAttack);
+			char buffer[PLATFORM_MAX_PATH*2];
+			GetClientWeapon(attacker, buffer, sizeof buffer);
+			//PrintToChatAll(buffer);
+			bool wpn = IsPermittedWeapon(buffer);
+			if(!wpn) return Plugin_Continue;
+			int level = NCRPG_GetSkillLevel(attacker, ThisSkillID);
+			if(level>0 && GetRandomFloat(0.0,100.0) < level*cfg_fChance)
+			{
+				PoisonAttack(attacker,victim,cfg_iAttack);
+			}
 		}
 	}
 	return Plugin_Continue;

@@ -14,7 +14,18 @@ public Plugin myinfo = {
 	url			= ""
 };
 
-public void OnPluginStart() { if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) NCRPG_OnRegisterSkills(); }
+public void OnPluginStart() 
+{ 
+	if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) 
+	{
+		for(int i = 1; i <= MaxClients; ++i)
+		if(IsValidPlayer(i))
+		{
+			OnClientPutInServer(i);
+		}
+		NCRPG_OnRegisterSkills(); 
+	}
+}
 
 public void OnPluginEnd() { if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) != -1) NCRPG_DisableSkill(ThisSkillID, true); }
 
@@ -31,17 +42,20 @@ public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDama
 
 public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage,int &damagetype) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && GetClientTeam(victim)!= GetClientTeam(attacker))
 	{	
-		int level = NCRPG_GetSkillLevel(victim, ThisSkillID);
-		if(level>0 && GetRandomFloat(0.0,100.0) < level*cfg_fChance)
+		if(damagetype & DMG_BULLET > 0)
 		{
-			if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Handled;
-			float amount = (damage*level*cfg_fPercent);
-			if(amount>GetClientHealth(attacker)) amount = GetClientHealth(attacker)-amount-1;
-			NCRPG_DealDamage(attacker, RoundToNearest(amount), victim);
-			NCRPG_SkillActivated(ThisSkillID,victim);
+			int level = NCRPG_GetSkillLevel(victim, ThisSkillID);
+			if(level>0 && GetRandomFloat(0.0,100.0) < level*cfg_fChance)
+			{
+				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Handled;
+				float amount = (damage*level*cfg_fPercent);
+				if(amount>GetClientHealth(attacker)) amount = GetClientHealth(attacker)-amount-1;
+				NCRPG_DealDamage(attacker, RoundToNearest(amount), victim);
+				NCRPG_SkillActivated(ThisSkillID,victim);
+			}
 		}
 	}
 	return Plugin_Continue;
