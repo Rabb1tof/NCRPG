@@ -134,7 +134,7 @@ public void OnMapStart() {
 }
 
 public void OnClientConnected(client) {
-	ResetPlayerEx(client);
+	LoadPlayer(client);
 }
 
 public void OnClientDisconnect(client) {
