@@ -185,7 +185,7 @@ Handle:BuildMenuUpgrades(client) {
 		if(!NCRPG_IsValidSkill(i))
 			continue;
 			
-		disab = NCRPG_IsValidSkill(i);
+		disab = !NCRPG_IsSkillDisabled(i);
 		if(disab)
 			FormatEx(disabled, sizeof disabled, "%T", "Skill Disabled", client);
 		else
@@ -707,3 +707,4 @@ Action:API_OnSkillLevelChange(client, &skillid, old_value, &new_value) {
 	Call_Finish(result);
 	return result;
 }
+
