@@ -222,7 +222,7 @@ public HandlerMenuUpgrades(Handle:menu, MenuAction:action, client, param2) {
 		decl String:info[MAX_SKILL_LENGTH],index;
 		GetMenuItem(menu, param2, info, sizeof(info));
 		index = StringToInt(info);
-		if(!NCRPG_IsValidSkill(index))
+		if(!NCRPG_IsSkillDisabled(index))
 		{
 			new cost = NCRPG_GetClientSkillCost(client, index);
 			if(NCRPG_GetCredits(client) >= cost)
@@ -422,7 +422,7 @@ public HandlerMenuStats(Handle:menu, MenuAction:action, client, param2) {
 		GetMenuItem(menu, param2, info, sizeof(info));
 		if(StrEqual(info, "reset"))
 			DisplayMenu(BuildMenuReset(client), client, MENU_TIME_FOREVER);
-		else if(StrEqual(info, "reset"))
+		else if(StrEqual(info, "restore"))
 			DisplayMenu(BuildMenuRestore(client), client, MENU_TIME_FOREVER);
 		else if(StrEqual(info, "pinfo"))
 		{
@@ -707,4 +707,3 @@ Action:API_OnSkillLevelChange(client, &skillid, old_value, &new_value) {
 	Call_Finish(result);
 	return result;
 }
-
