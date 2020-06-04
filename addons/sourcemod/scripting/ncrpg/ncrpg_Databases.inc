@@ -170,7 +170,7 @@ void LoadPlayer(int client) {
 			{
 				if(!cfg_bBotSave && IsFakeClient(client)) return;
 				Handle array = CreateArray(ByteCountToCells(sizeof(buffer)));
-				PushArrayCell(GetPlayersArrayHandle(), array);
+				PushArrayCell(hArrayPlayers, array);
 				PushArrayCell(array, client);	// Player index
 				PushArrayString(array, buffer);	// SteamID
 												// Name
@@ -202,9 +202,10 @@ void LoadPlayer(int client) {
 }
 
 void ResetPlayerEx(int client) {
-	int pos;AuthControl[client] = false;
+	int pos;
+	AuthControl[client] = false;
 	if((pos = GetPlayerArrayPosition(client)) != -1)
-		RemoveFromArray(GetPlayersArrayHandle(), pos);
+		RemoveFromArray(hArrayPlayers, pos);
 }
 
 int SQL_FetchIntByName(Handle hndl, const char[] columnname, &DBResult:result = DBVal_Error) {
@@ -283,7 +284,7 @@ int SetXP(int client,int xp) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
 	{
-		SetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_XP, (xp >= -1)?xp:-2);
+		SetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_XP, (xp >= -1)?xp:-2);
 		return xp;
 	}
 	
@@ -293,7 +294,7 @@ int SetXP(int client,int xp) {
 int GetXP(int client) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
-		return GetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_XP);
+		return GetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_XP);
 		
 	return -1;
 }
@@ -302,7 +303,7 @@ int SetLevel(int client,int level) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
 	{
-		SetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_LEVEL, (level >= -1)?level:-2);
+		SetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_LEVEL, (level >= -1)?level:-2);
 		return level;
 	}
 	
@@ -313,7 +314,7 @@ int SetReqXP(int client,int xp) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
 	{
-		SetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_REQXP, (xp >= -1)?xp:-2);
+		SetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_REQXP, (xp >= -1)?xp:-2);
 		return xp;
 	}
 	
@@ -323,7 +324,7 @@ int SetReqXP(int client,int xp) {
 int GetReqXP(int client) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
-		return GetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_REQXP);
+		return GetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_REQXP);
 		
 	return -1;
 }
@@ -332,7 +333,7 @@ int GetReqXP(int client) {
 int GetLevel(int client) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
-		return GetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_LEVEL);
+		return GetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_LEVEL);
 		
 	return -1;
 }
@@ -341,7 +342,7 @@ int SetCredits(int client,int credits) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
 	{
-		SetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_CREDITS, (credits >= -1)?credits:-2);
+		SetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_CREDITS, (credits >= -1)?credits:-2);
 		return credits;
 	}
 	
@@ -351,7 +352,7 @@ int SetCredits(int client,int credits) {
 int GetCredits(int client) {
 	int pos = GetPlayerArrayPosition(client);
 	if(pos != -1)
-		return GetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_CREDITS);
+		return GetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_CREDITS);
 		
 	return -1;
 }
@@ -362,7 +363,7 @@ int SetSkillLevel(int client,int skillid,int level) {
 		int pos = GetPlayerArrayPosition(client);
 		if(pos != -1)
 		{
-			SetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_SKILLS+skillid, level);
+			SetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_SKILLS+skillid, level);
 			return level;
 		}
 	}
@@ -375,7 +376,7 @@ int GetSkillLevel(int client,int skillid) {
 	{
 		int pos = GetPlayerArrayPosition(client);
 		if(pos != -1)
-			return GetArrayCell(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_SKILLS+skillid);
+			return GetArrayCell(GetArrayCell(hArrayPlayers, pos), ARR_SKILLS+skillid);
 	}
 		
 	return -1;
@@ -440,7 +441,7 @@ void LoadSkill(int skillid, const char[] shortname) {
 				continue;
 			
 			Handle tmp = CreateArray();
-			Handle array = GetArrayCell(GetPlayersArrayHandle(), pos);
+			Handle array = GetArrayCell(hArrayPlayers, pos);
 			PushArrayCell(tmp, array);
 			// Если не существует массива скила у игрока, то создаем
 			if(ARR_SKILLS+skillid >= GetArraySize(array))
@@ -491,7 +492,7 @@ void SavePlayer(client) {
 					GetSkillShortname(id, buffer, sizeof(buffer));
 					Format(query, sizeof(query), "%s, _%s = '%d'", query, buffer, GetSkillLevel(client, id));
 				}
-				GetArrayString(GetArrayCell(GetPlayersArrayHandle(), pos), ARR_STEAMID, buffer, sizeof(buffer));
+				GetArrayString(GetArrayCell(hArrayPlayers, pos), ARR_STEAMID, buffer, sizeof(buffer));
 				Format(query, sizeof(query), "UPDATE nc_rpg SET %s WHERE steamid = '%s'", query, buffer);
 				SQL_TQuery(GetSQLHandle(), CallBackSavePlayer, query, client, DBPrio_Normal);
 			}
