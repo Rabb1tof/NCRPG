@@ -1,0 +1,46 @@
+"Phrases"
+{
+	"You exchange cancel"
+	{
+		"en"	"{RED}You cancel frags {LIGHTGREEN}exchange{RED}!"
+		"ru"	"{RED}Вы отменили обмен {LIGHTGREEN}фрагов{RED}!"
+	}
+	"You succesfull exchange"
+	{
+		"#format" "{1:d},{2:d}"
+		"en"	"You succesfull exchange {1} frags and get {2} credits."
+		"ru"	"Вы успешно обменяли {PURPLE}{1}{DEFAULT} фрагов и получили {LIGHTGREEN}{2}{DEFAULT} кредитов."
+	}	
+	"You write incorrect num"
+	{
+		"en"	"{RED}You entered an incorrect value frags, your exchange is canceled!"
+		"ru"	"{RED}Вы ввели некорректное значение фрагов, ваш обмен отменен!"
+	}
+	"Write in chat you value"
+	{
+		"en"	"{LIGHTGREEN}Write in chat the number of frags, which you want to exchange"
+		"ru"	"{LIGHTGREEN}Введите в чат кол-во фрагов, которое хотите обменять"
+	}
+	"exchange all"
+	{
+		"en"	"Exchange all frags"
+		"ru"	"Обменять все фраги"
+	}
+	"You value"
+	{
+		"en"	"Enter your number"
+		"ru"	"Ввести своё кол-во"
+	}
+	"exchange"
+	{
+		"#format" "{1:d}"
+		"en"	"exchange {1} frags"
+		"ru"	"Обменять {1} кредитов"
+	}
+	"Exchange Rates"
+	{
+		"#format" "{1:d}"
+		"en"	"[Exchanger]\nToday rate: 1 frag to {1} credits"
+		"ru"	"[Обменник]\nСегодняшний курс: 1 фраг к {1} кредитам"
+	}
+}

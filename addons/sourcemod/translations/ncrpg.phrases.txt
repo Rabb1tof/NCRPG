@@ -1,0 +1,1009 @@
+"Phrases"
+{
+	//Menu Translate
+	"MainMenu"
+	{
+		"ru"	"Главное меню"
+		"en"	"Main Menu"
+	}
+	"MainMenuAbility"
+	{
+		"ru"	"Умения"
+		"en"	"Ability"
+	}	
+	"MainMenuShop"
+	{
+		"ru"	"Магазин"
+		"en"	"Shop"
+	}	
+	"MainMenuStatistics"
+	{
+		"ru"	"Статистика"
+		"en"	"Statistics"
+	}	
+	"Stats title"
+	{
+		"#format"	"{1:N}"
+		"en"	"Statistics {1}:"
+		"ru"	"Статистика {1}:"
+	}
+	"Your level"
+	{
+		"#format"	"{1:i}"
+		"en"	"Your level: {1}"
+		"ru"	"Ваш уровень: {1}"
+	}
+	"Your XP"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"	"Your XP: {1}/{2}"
+		"ru"	"Ваш опыт: {1}/{2}"
+	}
+	"Your credits"
+	{
+		"#format"	"{1:i}"
+		"en"	"Your credits: {1}"
+		"ru"	"Ваши кредиты: {1}"
+	}
+	"Reset stats"
+	{
+		"en"	"Reset stats"
+		"ru"	"Обнулиться"
+	}
+	"Reset title"
+	{
+		"en"	"Are you sure you want to reset statistics?\nYou will not be able to get your level, credits etc back."
+		"ru"	"Вы уверены, что хотите обнулиться?\nВы не сможете вернуть свой уровень, кредиты и т.п."
+	}
+	"Restore stats"
+	{
+		"en"	"Restore stats"
+		"ru"	"Перераспределение"
+	}
+	"Restore title"
+	{
+		"#format"	"{1:s}"
+		"en"	"Are you sure you want to do redistribution?\n{1}"
+		"ru"	"Вы уверены, что хотите сделать перераспределение?\n{1}"
+	}
+	"You will lose: credits"
+	{
+		"#format"	"{1:i}"
+		"en"	"You will lose: {1} credits"
+		"ru"	"Вы потеряете: {1} кредитов."
+	}
+	"Yes"
+	{
+		"en"	"Yes"
+		"ru"	"Да"
+	}
+	"No"
+	{
+		"en"	"No"
+		"ru"	"Нет"
+	}
+	"MainMenuSettings"
+	{
+		"ru"	"Настройки"
+		"en"	"Settings"
+	}		
+	"MainMenuHelp"
+	{
+		"ru"	"Помощь"
+		"en"	"Help"
+	}	
+	"MainMenuInventory"
+	{
+		"ru"	"Инвентарь"
+		"en"	"Inventory"
+	}	
+	"MainMenuAbilitySell"
+	{
+		"ru"	"Продажа умений"
+		"en"	"Sell ability"
+	}
+	"You inventory empty"
+	{
+		"ru"	"Ваш инвентарь пуст!"
+		"en"	"You inventory empty!"
+	}
+	"Upgrade title"
+	{
+		"#format"	"{1:i}"
+		"ru"	"Прокачать [Кредиты: {1}]:"
+		"en"	"Upgrade [Credits: {1}]:"
+	}
+	"Skill upgrade"
+	{
+		"#format"	"{1:s},{2:s}"
+		"ru"	"{1} {2}"
+		"en"	"{1} {2}"
+	}
+	"Skill maximum lvl"
+	{
+		"ru"	"[МАКСИМУМ]"
+		"en"	"[MAX. LEVEL]"
+	}
+	"Sell title"
+	{
+		"#format"	"{1:i}"
+		"en"	"Sell [Credits: {1}]:"
+		"ru"	"Продать [Кредиты: {1}]:"
+	}
+	"Sell skill"
+	{
+		"#format"	"{1:i},{2:i},{3:s},{4:i},{5:i}"
+		"en"	"[{1}/{2}] {3} ({4}/{5})"
+		"ru"	"[{1}/{2}] {3} ({4}/{5})"
+	}
+	"Skill cost"
+	{
+		"#format"	"{1:i},{2:i},{3:i}"
+		"ru"	"[{1}/{2}] [Стоимость: {3}]"
+		"en"	"[{1}/{2}] [Cost: {3}]"
+	}
+	"Skills are not available"
+	{
+		"ru"	"Навыки отсутствуют"
+		"en"	"Skills are not available"
+	}
+	//Info Player Menu
+	"Info about players"
+	{
+		"en"	"Info about players"
+		"ru"	"Информация об игроках"
+	}
+	"Info about skills title"
+	{
+		"#format"	"{1:N}"
+		"en"	"Info about skills the {1}:"
+		"ru"	"Информация о навыках {1}:"
+	}
+	"Info about skills"
+	{
+		"en"	"Info about skills"
+		"ru"	"Информация о навыках"
+	}
+	"Level:"
+	{
+		"#format"	"{1:i}"
+		"en"	"Level: {1}"
+		"ru"	"Уровень: {1}"
+	}
+	"XP:"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"	"XP: {1}/{2}"
+		"ru"	"Опыт: {1}/{2}"
+	}
+	"Credits:"
+	{
+		"#format"	"{1:i}"
+		"en"	"Credits: {1}"
+		"ru"	"Кредиты: {1}"
+	}
+	"Refresh"
+	{
+		"en"	"Refresh"
+		"ru"	"Обновить"
+	}
+	"Skill info"
+	{
+		"#format"	"{1:i},{2:i},{3:s}"
+		"en"	"[{1}/{2}] {3}"
+		"ru"	"[{1}/{2}] {3}"
+	}
+	
+	"Choose a player:"
+	{
+		"en"	"Choose a player:"
+		"ru"	"Выберите игрока:"
+	}
+	"Player"
+	{
+		"#format"	"{1:s},{2:N}"
+		"en"	"[{1}] {2}"
+		"ru"	"[{1}] {2}"
+	}
+	"On the server, there are no other players!"
+	{
+		"en"	"On the server, there are no other players"
+		"ru"	"На сервере нету других игроков"
+	}
+	
+	//Chat Translate
+	
+	"NCRPG"
+	{
+		"ru"	"{BLUE}[{RED}NCRPG{BLUE}]{DEFAULT}"
+		"en"	"{BLUE}[{RED}NCRPG{BLUE}]{DEFAULT}"
+	}
+	"This function is to develop"
+	{
+		"ru"	"Извините, данная функция находится в разработке"
+		"en"	"This function is to develop"
+	}
+	"This function is disabled"
+	{
+		"ru"	"Извините, данная функция отключена"
+		"en"	"Sorry, this function is disabled"
+	}
+	"Not enough credits!"
+	{
+		"ru"	"Недостаточно кредитов!"
+		"en"	"Not enough credits!"
+	}
+	"You have raised the level of skill!"
+	{
+		"#format"	"{1:s},{2:i},{3:i}"
+		"ru"	"Вы прокачали {PURPLE}{1}{DEFAULT} с {LIGHTGREEN}{2}{DEFAULT} на {LIGHTGREEN}{3}{DEFAULT} уровень."
+		"en"	"You have upgrade the {PURPLE}{1}{DEFAULT} from {LIGHTGREEN}{2}{DEFAULT} to {LIGHTGREEN}{3}{DEFAULT} level."
+	}
+	"You have sold the level of skill!"
+	{
+		"#format"	"{1:s},{2:i},{3:i}"
+		"en"	"You have sold the {PURPLE}{1}{DEFAULT} with {LIGHTGREEN}{2}{DEFAULT} for {LIGHTGREEN}{3}{DEFAULT} level."
+		"ru"	"Вы продали {PURPLE}{1}{DEFAULT} с {LIGHTGREEN}{2}{DEFAULT} на {LIGHTGREEN}{3}{DEFAULT} уровень."
+	}
+	"Minimum players"
+	{
+		"#format"	"{1:i}"
+		"en"	"Experience is not awarded, if players less than {LIGHTGREEN}{1}{DEFAULT}."
+		"ru"	"Опыт не начисляется, если игроков меньше {LIGHTGREEN}{1}{DEFAULT}."
+	}
+	"Got XP"
+	{
+		"#format"	"{1:i},{2:i},{3:i}"
+		"en"	"You got XP: {LIGHTGREEN}{1}{DEFAULT}. Your XP: {LIGHTGREEN}{2}{DEFAULT}/{LIGHTGREEN}{3}{DEFAULT}."
+		"ru"	"Вы получили опыт: {LIGHTGREEN}{1}{DEFAULT}. Ваш опыт: {LIGHTGREEN}{2}{DEFAULT}/{LIGHTGREEN}{3}{DEFAULT}"
+	}
+	"Got levels"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"	"You got level: {LIGHTGREEN}{1}{DEFAULT}. Your level: {LIGHTGREEN}{2}{DEFAULT}."
+		"ru"	"Вы получили уровень: {LIGHTGREEN}{1}{DEFAULT}. Ваш уровень: {LIGHTGREEN}{2}{DEFAULT}."
+	}
+	"Got credits"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"	"You got credits: {LIGHTGREEN}{1}{DEFAULT}. Your credits: {LIGHTGREEN}{2}{DEFAULT}."
+		"ru"	"Вы получили кредиты: {LIGHTGREEN}{1}{DEFAULT}. Ваши кредиты: {LIGHTGREEN}{2}{DEFAULT}."
+	}
+	"Lose XP"
+	{
+		"#format"	"{1:i},{2:i},{3:i}"
+		"en"	"You lose XP: {lightgreen}{1}{default}. Your XP: {lightgreen}{2}{default}/{lightgreen}{3}{default}."
+		"ru"	"Вы потеряли опыт: {lightgreen}{1}{default}. Ваш опыт: {lightgreen}{2}{default}/{lightgreen}{3}{default}"
+	}
+	"Lose levels"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"	"You lose level: {lightgreen}{1}{default}. Your level: {lightgreen}{2}{default}."
+		"ru"	"Вы потеряли уровень: {lightgreen}{1}{default}. Ваш уровень: {lightgreen}{2}{default}."
+	}
+	"Lose credits"
+	{
+		"#format"	"{1:i},{2:i}"
+		"en"	"You lose credits: {lightgreen}{1}{default}. Your credits: {lightgreen}{2}{default}."
+		"ru"	"Вы потеряли кредиты: {lightgreen}{1}{default}. Ваши кредиты: {lightgreen}{2}{default}."
+	}
+	"Help title"
+	{
+		"en"	"Help:"
+		"ru"	"Помощь:"
+	}
+	"Back"
+	{
+		"en"	"Back"
+		"ru"	"Назад"
+	}	
+	"Exit"
+	{
+		"en"	"Exit"
+		"ru"	"Выход"
+	}
+	"Next"
+	{
+		"en"	"Next"
+		"ru"	"Далее"
+	}
+	"Rules"
+	{
+		"en"	"Rules"
+		"ru"	"Правила"
+	}	
+	"Help: Rules"
+	{
+		"en"	"Servers rules"
+		"ru"	"Правила Сервера"
+	}
+	"Rules page 1"
+	{
+		"en"	"Server rules"
+		"ru"	"Важно:\n1. Мат разрешен, но не оскорбления\n2. Голосовой чат 16+\nЗапрещено:\n1. Использование багов карт/мода\n2. Спам в голосовом и обычном чате\n3. Попрошайничество кредитов/лвлов\n4. Критика действий админов"
+	}	
+	"Rules page 2"
+	{
+		"en"	"Server rules"
+		"ru"	"5. Обсуждение политики\n_______________\nЕсли у вас есть какие-то предложения\nто пожалуйста сообщите нам об этом\nЭто можно сделать следующить образом:\nГл.Меню->Помощь->Сообщить об ошибке"
+	}
+	
+	"What is an RPG?"
+	{
+		"en"	"What is an RPG?"
+		"ru"	"Что такое RPG?"
+	}	
+	"Feedback bug"
+	{
+		"en"	"Feedback bug"
+		"ru"	"Сообщить об ошибке"
+	}
+	"Help: What is an RPG?"
+	{
+		"en"	"no translation, sorry("
+		"ru"	"RPG - это игровой мод, в котором\nигрок должен выполнять задачи карты,\nполучая за это опыт и, набрав нужное кол-во,\nполучать уровни, а за них - кредиты, на которые\nможно покупать навыки в RPG меню и\nкоторые помогут с игрой."
+	}		
+	"Help: Admins"
+	{
+		"en"	"Главные администраторы:\n_______________\n1)Carlas \n2)СаНчОуС\n_______________\nЕсли вы хотите купить кредиты, пишите в чате !lk\nИли пройдите по ссылке shop.svoboda-csgo.ru"
+		"ru"	"Главные администраторы:\n_______________\n1)Carlas \n2)СаНчОуС\n_______________\nЕсли вы хотите купить кредиты, пишите в чате !lk\nИли пройдите по ссылке shop.svoboda-csgo.ru"
+	}		
+	"Help: Glide"
+	{
+		"en"	"no translation, sorry("
+		"ru"	"Чтобы скользить по сюрфу, вам надо нажимать клавишу движения\nв ту сторону, с которой находится сам сюрф.\nПри скольжении никогда не нажимайте клавишу движения вперед (w)!\n"
+	}			
+	"Admins"
+	{
+		"en"	"Admins"
+		"ru"	"Администрация"
+	}		
+	"Glide"
+	{
+		"en"	"As glide?"
+		"ru"	"Скольжение"
+	}		
+	"Help: PrintToBug"
+	{
+		"en"	"Print to bug"
+		"ru"	"Сообщить об ошибке"
+	}		
+	"Help: feedback bug"
+	{
+		"en"	"Feedback bug"
+		"ru"	"Если вы нашли какую-то ошибку в данном моде,\n то пожалуйста сообщите об этом администратору.\nВы можете это сделать двумя способами:\n1) Выбрав 5-ый пункт в этом меню\n2) Написав в чате ncrpg_bfb ''ваше сообщение''"
+	}		
+	"HUD feedback bug"
+	{
+		"en"	"Print your Feedback bug"
+		"ru"	"{LIGHTGREEN}Напишите вашу {RED}ошибку {LIGHTGREEN}в чате или отмените ввод набрав в чате одно из следующих слов: {RED}отмена,cancel"
+	}	
+	"Thanks for the error message"
+	{
+		"en"	"{LIGHTGREEN}Thanks for the {RED}error message{LIGHTGREEN}!"
+		"ru"	"{LIGHTGREEN}Спасибо за сообщение об {RED}ошибке{LIGHTGREEN}!"
+	}	
+	"You cancel the input of the error message"
+	{
+		"en"	"{LIGHTGREEN}You cancel the input of the {RED}error message{LIGHTGREEN}!"
+		"ru"	"{LIGHTGREEN}Вы {RED}отменили{LIGHTGREEN} ввод сообщения об {RED}ошибке{LIGHTGREEN}!"
+	}
+	"Description of skills"
+	{
+		"en"	"Description of skills"
+		"ru"	"Описание навыков"
+	}
+	"Choose a skill:"
+	{
+		"en"	"Choose a skill:"
+		"ru"	"Выберите навык:"
+	}
+
+
+	// admin menu
+	
+	"Administration options for player"
+	{
+		"#format"	"{1:s}"
+		"en"	"Administration options for {1}"
+		"ru"	"Что вы хотите сделать с игроком {1}?"
+	}	
+	"adminXP"
+	{
+		"en"	"Increase/Decrease XP"
+		"ru"	"Выдать/забрать опыт"
+	}	
+	"adminLvl"
+	{
+		"en"	"Increase/Decrease LVL"
+		"ru"	"Выдать/забрать уровень"
+	}	
+	"adminCredits"
+	{
+		"en"	"Increase/Decrease credits"
+		"ru"	"Выдать/забрать кредиты"
+	}	
+	"adminAbility"
+	{
+		"en"	"Increase/Decrease LVL ability"
+		"ru"	"Дать/забрать уровень скилла"
+	}	
+	"adminReset"
+	{
+		"en"	"Reset"
+		"ru"	"Обнулить"
+	}	
+	"The player you selected has left the server"
+	{
+		"en"	"The player you selected has left the server"
+		"ru"	"Выбранный игрок покинул сервер"
+	}	
+	"Choose player"
+	{
+		"en"	"Choose player:\n"
+		"ru"	"Выберите игрока:\n"
+	}	
+	"Administration xp options for player"
+	{
+		"#format"	"{1:s}"
+		"en"	"Administration xp options for {1}\n"
+		"ru"	"Что с опытом {1} вы хотите сделать?\n"
+	}	
+	"Give 1000 XP"
+	{
+		"en"	"Give 1000 XP"
+		"ru"	"Дать 1000 XP"
+	}	
+	"Give 10000 XP"
+	{
+		"en"	"Give 10000 XP"
+		"ru"	"Дать 10000 XP"
+	}	
+	"Give 100000 XP"
+	{
+		"en"	"Give 100000 XP"
+		"ru"	"Дать 100000 XP"
+	}	
+	"Remove 1000 XP"
+	{
+		"en"	"Remove 1000 XP"
+		"ru"	"Забрать 1000 XP"
+	}	
+	"Remove 10000 XP"
+	{
+		"en"	"Remove 10000 XP"
+		"ru"	"Забрать 10000 XP"
+	}	
+	"Remove 100000 XP"
+	{
+		"en"	"Remove 100000 XP"
+		"ru"	"Забрать 100000 XP"
+	}	
+	"Give 10000 Credits"
+	{
+		"en"	"Give 10000 credits"
+		"ru"	"Дать 10000 кредитов"
+	}	
+	"Give 100000 Credits"
+	{
+		"en"	"Give 100000 credits"
+		"ru"	"Дать 100000 кредитов"
+	}	
+	"Give 1000000 Credits"
+	{
+		"en"	"Give 1000000 credits"
+		"ru"	"Дать 1000000 кредитов"
+	}	
+	"Remove 10000 Credits"
+	{
+		"en"	"Remove 10000 credits"
+		"ru"	"Забрать 10000 кредитов"
+	}	
+	"Remove 100000 Credits"
+	{
+		"en"	"Remove 100000 credits"
+		"ru"	"Забрать 100000 кредитов"
+	}	
+	"Remove 1000000 Credits"
+	{
+		"en"	"Remove 1000000 credits"
+		"ru"	"Забрать 1000000 кредитов"
+	}
+	"Give 1 lvl"
+	{
+		"en"	"Give 1 lvl"
+		"ru"	"Дать 1 левел"
+	}	
+	"Give 5 lvl"
+	{
+		"en"	"Give 5 lvl"
+		"ru"	"Дать 5 левел"
+	}	
+	"Give 20 lvl"
+	{
+		"en"	"Give 20 lvl"
+		"ru"	"Дать 20 левел"
+	}
+	"Remove 1 lvl"
+	{
+		"en"	"Remove 1 lvl"
+		"ru"	"Забрать 1 левел"
+	}	
+	"Remove 5 lvl"
+	{
+		"en"	"Remove 5 lvl"
+		"ru"	"Забрать 5 левел"
+	}	
+	"Remove 20 lvl"
+	{
+		"en"	"Remove 20 lvl"
+		"ru"	"Забрать 20 левел"
+	}	
+	"Vip: Select an action"
+	{
+		"en"	"Select an action:\n"
+		"ru"	"Выберите действие:\n"
+	}	
+	
+	"Admin: reset player"
+	{
+		"#format"	"{1:s}"
+		"en"	"{DEFAULT}Admin {GREEN}{1}{DEFAULT} resets {LIGHTGREEN} you{DEFAULT}."
+		"ru"	"{DEFAULT}Админ {GREEN}{1}{DEFAULT} обнулил {LIGHTGREEN}вас{DEFAULT}."
+	}
+	"Vip take level amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You take own{GREEN}{1}{DEFAULT} levels."
+		"ru"	"{DEFAULT}Вы забрали у себя {GREEN}{1}{DEFAULT} уровней."
+	}
+	"Vip take credits amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You take own{GREEN}{1}{DEFAULT} credits."
+		"ru"	"{DEFAULT}Вы забрали у себя {GREEN}{1}{DEFAULT} кредитов."
+	}
+	"Vip take xp amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You take own{GREEN}{1}{DEFAULT} xp."
+		"ru"	"{DEFAULT}Вы забрали у себя {GREEN}{1}{DEFAULT} опыта."
+	}	
+	"Vip add xp amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You add own{GREEN}{1}{DEFAULT} xp."
+		"ru"	"{DEFAULT}Вы дали себе {GREEN}{1}{DEFAULT} опыта."
+	}	
+	"Vip add level amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You add own{GREEN}{1}{DEFAULT} lvls."
+		"ru"	"{DEFAULT}Вы дали себе {GREEN}{1}{DEFAULT} уровней."
+	}	
+	"Vip add credits amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You add own{GREEN}{1}{DEFAULT} credits."
+		"ru"	"{DEFAULT}Вы дали себе {GREEN}{1}{DEFAULT} кредитов."
+	}	
+	"Vip: MainMenu"
+	{
+		"en"	"Vip menu"
+		"ru"	"Вип рпг меню\nВыберите действие:"
+	}
+	
+	
+	//Upgrades
+	
+	"health_Name"
+	{
+		"en"	"Health"
+		"ru"	"Здоровье"
+	}		
+	"health_Desc"
+	{
+		"en"	"Health+"
+		"ru"	"Здоровье+"
+	}	
+	"longjump_Name"
+	{
+		"en"	"Long Jump"
+		"ru"	"Long Jump"
+	}		
+	"longjump_Desc"
+	{
+		"en"	"Gives you the ability to jump a longer distance"
+		"ru"	"Увиличивает дальность вашего прыжка"
+	}	
+	"regenhp_Name"
+	{
+		"en"	"Regen HP"
+		"ru"	"Регенерация"
+	}		
+	"regenhp_Desc"
+	{
+		"en"	"Gives you the ability to steadily regain HP until health is fully replenished"
+		"ru"	"Регенирирует ваше здоровье"
+	}	
+	"vampire_Name"
+	{
+		"en"	"Vampire"
+		"ru"	"Вампиризм"
+	}		
+	"vampire_Desc"
+	{
+		"en"	"Gives you the ability to receive a fraction of the damage done to enemies"
+		"ru"	"Преобразует часть урона, в ваши жизни"
+	}	
+	"recovery_Name"
+	{
+		"en"	"Recovery"
+		"ru"	"Кобура"
+	}	
+	"recovery_Desc"
+	{
+		"en"	"You will get your weapons after death"
+		"ru"	"Есть шанс получить свое оружие после смерти"
+	}
+	"impulse_Name"
+	{
+		"en"	"Impulse"
+		"ru"	"Импульс"
+	}	
+	"impulse_Desc"
+	{
+		"en"	"You get bullets in the clip when you are attacked"
+		"ru"	"Есть шанс получить патроны, когда вы получаете урон"
+	}
+	"ghoul_Name"
+	{
+		"en"	"Ghoul"
+		"ru"	"Вурдалак"
+	}	
+	"ghoul_Desc"
+	{
+		"en"	"You get health for killing enemies with the knife"
+		"ru"	"Вы получаете здоровье, за убийство противника с ножа"
+	}
+	"poisonsm_Name"
+	{
+		"en"	"Poision smoke"
+		"ru"	"Отравляющий дым"
+	}		
+	"poisonsm_Desc"
+	{
+		"en"	"Gives you the ability to make your smokegrenades dealing damage to other players when within smoke radius"
+		"ru"	"Урон игрокам, находящимся в дыме вашей гранаты"
+	}	
+	"icestab_Name"
+	{
+		"en"	"Ice stab"
+		"ru"	"Ледяной нож"
+	}	
+	"icestab_Desc"
+	{
+		"en"	"Gives you the ability to freeze your enemy by stabbing him"
+		"ru"	"Замораживает врага при ранении ножом"
+	}	
+	"frostp_Name"
+	{
+		"en"	"Frost Pistols"
+		"ru"	"Ледяной пистолет"
+	}	
+	"frostp_Desc"
+	{
+		"en"	"Gives you the ability to freeze enemies by shooting them with a pistol"
+		"ru"	"Замедляет врага, при попадании из пистолета"
+	}	
+	"frostnade_Name"
+	{
+		"en"	"Frost nade"
+		"ru"	"Ледяные гранаты"
+	}		
+	"frostnade_Desc"
+	{
+		"en"	"Gives you the ability to frost your enemies with a HE grenade"
+		"ru"	"Замораживает врага при ранении от HE гранаты"
+	}	
+	"regenarm_Name"
+	{
+		"en"	"Regen Armor"
+		"ru"	"Реген брони"
+	}		
+	"regenarm_Desc"
+	{
+		"en"	"Gives you the ability to steadily regain armor until it is fully replenished"
+		"ru"	"Востановление брони"
+	}	
+	"damage_Name"
+	{
+		"en"	"Damage"
+		"ru"	"Урон"
+	}	
+	"damage_Desc"
+	{
+		"en"	"Gives you the ability to give extra damage to your opponent"
+		"ru"	"Вы наносите больше урона по противнику"
+	}
+	"pswap_Name"
+	{
+		"en"	"Position Swap"
+		"ru"	"Смена позиций"
+	}	
+	"pswap_Desc"
+	{
+		"en"	"Gives you the chance to swap position with your attacker"
+		"ru"	"Обмен местами с атакующим игроком"
+	}	
+	"gravity_Name"
+	{
+		"en"	"Gravity"
+		"ru"	"Гравитация"
+	}	
+	"gravity_Desc"
+	{
+		"en"	"Increases the height of your jump"
+		"ru"	"Увеличивает высоту вашего прыжка"
+	}	
+	"speed_Name"
+	{
+		"en"	"Speed"
+		"ru"	"Скорость"
+	}	
+	"speed_Desc"
+	{
+		"en"	"Increases you speed"
+		"ru"	"Увеличивает вашу скорость"
+	}
+	"spy_Name"
+	{
+		"en"	"Spy"
+		"ru"	"Шпион"
+	}	
+	"spy_Desc"
+	{
+		"en"	"Gives a chance at killing the enemy get his skin"
+		"ru"	"Дает шанс при убийстве противника получить его скин"
+	}
+	"clone_Name"
+	{
+		"en"	"Clone"
+		"ru"	"Клон"
+	}	
+	"clone_Desc"
+	{
+		"en"	"Chance use of false activation grenades create a clone"
+		"ru"	"Дает шанс при активации ложной гранаты создать своего клона"
+	}	
+	"bouncybull_Name"
+	{
+		"en"	"Bouncy Bullets"
+		"ru"	"Тяжелые пули"
+	}	
+	"bouncybull_Desc"
+	{
+		"en"	"Gives you the ability to give extra damage to your opponent"
+		"ru"	"Противник будет отлетать от ваших попаданий"
+	}	
+	"illusion_Name"
+	{
+		"en"	"Illusion"
+		"ru"	"Иллюзия"
+	}	
+	"illusion_Desc"
+	{
+		"en"	"Gives you a chance to create a clone and become invisible, if you shoot at\nand you have very little health"
+		"ru"	"Дает вам шанс создать клона и стать невидимым, если по вам стреляют\nи у вас очень мало здоровья"
+	}	
+	"mirror_Name"
+	{
+		"en"	"Mirror"
+		"ru"	"Зеркало"
+	}	
+	"mirror_Desc"
+	{
+		"en"	"Reflects the enemy of the damage caused by you"
+		"ru"	"Отражает противнику часть нанесенного вам урона"
+	}	
+	"incidence_Name"
+	{
+		"en"	"Incidence"
+		"ru"	"Ударная Волна"
+	}	
+	"incidence_Desc"
+	{
+		"en"	"A fall from a great height causes damage to surrounding enemies"
+		"ru"	"При падении с большой высоты наносит урон окружающим противникам"
+	}	
+	"eye_Name"
+	{
+		"en"	"Eagle Eye"
+		"ru"	"Орлиный глаз"
+	}	
+	"eye_Desc"
+	{
+		"en"	"While aiming your opponent is highlighted"
+		"ru"	"Во время прицеливания вам подсвечивается противник"
+	}	
+	"attackspd_Name"
+	{
+		"en"	"Fire rate"
+		"ru"	"Скорость атаки"
+	}	
+	"attackspd_Desc"
+	{
+		"en"	"More weapon fire rate"
+		"ru"	"увеличивает скорость атаки"
+	}	
+	"stealth_Name"
+	{
+		"en"	"Stealth"
+		"ru"	"Невидимость"
+	}	
+	"stealth_Desc"
+	{
+		"en"	"More Stealth"
+		"ru"	"Увеличивает вашу невидимость"
+	}	
+	"tesla_Name"
+	{
+		"en"	"Tesla Coil"
+		"ru"	"Тесла"
+	}	
+	"tesla_Desc"
+	{
+		"en"	"Electric damage"
+		"ru"	"Наносит урон электричеством по противнику,\nесли он рядом с вами"
+	}	
+	"evade_Name"
+	{
+		"en"	"Evansion"
+		"ru"	"Уклонение"
+	}	
+	"evade_Desc"
+	{
+		"en"	"Evansion for damage"
+		"ru"	"Вы уклоняетесь от выстрелов противника"
+	}
+	"parasite_Name"
+	{
+		"en"	"Parasite"
+		"ru"	"Паразит"
+	}	
+	"parasite_Desc"
+	{
+		"en"	"If during the killing of the enemy,\nyou sat down, you will be teleported to his place"
+		"ru"	"Если во время убийства противника вы присели,\nто вы телепортируетесь на его место"
+	}	
+	"respawn_Name"
+	{
+		"en"	"Respawn"
+		"ru"	"Воскрешение"
+	}	
+	"respawn_Desc"
+	{
+		"en"	"Respawn after death"
+		"ru"	"В случае вашей смерти,есть шанс, что вы воскреснете!"
+	}	
+	"medic_Name"
+	{
+		"en"	"Medic"
+		"ru"	"Медик"
+	}	
+	"medic_Desc"
+	{
+		"en"	"Gives you the ability to slowly raise the HP of nearby teammates"
+		"ru"	"Лечит ближайших игроков вашей команды"
+	}	
+	"adrenaline_Name"
+	{
+		"en"	"Adrenaline"
+		"ru"	"Адреналин"
+	}	
+	"adrenaline_Desc"
+	{
+		"en"	"Gives you the ability to turn up your speed when you got hurt"
+		"ru"	"Увеличивает скорость при ранени"
+	}	
+	"explode_Name"
+	{
+		"en"	"Explode"
+		"ru"	"Взрыв"
+	}	
+	"explode_Desc"
+	{
+		"en"	"When you die, you can explode and cause damage to the enemy"
+		"ru"	"Когда вы умрете, вы можете взорваться и нанести урон противнику"
+	}
+	"firet_Name"
+	{
+		"en"	"Fire Taser"
+		"ru"	"Огненный Импульс"
+	}	
+	"firet_Desc"
+	{
+		"en"	"When you shoot a Taser is a chance that you will release the fireball\nwhich he will bring to the enemy"
+		"ru"	"Когда вы стреляете с Электрошокера есть шанс, что вы выпустите огненный шар,\nкоторый сам наведется на противника"
+	}
+	"inhumanity_Name"
+	{
+		"en"	"Inhumanity"
+		"ru"	"Бесчеловечность"
+	}	
+	"inhumanity_Desc"
+	{
+		"en"	"if your teammates died, u get hp"
+		"ru"	"Если кто-то умирает рядом с вами из вашей команды,\n вы получаете хп"
+	}
+	"engineer_Name"
+	{
+		"en"	"Engineer"
+		"ru"	"Инженер"
+	}	
+	"engineer_Desc"
+	{
+		"en"	"Yor regen teammates armor"
+		"ru"	"Вы восстанавливаете союзникам броню"
+	}
+		
+	"icestab_immun_Name"
+	{
+		"en"	"AntiFrost"
+		"ru"	"АнтиЗаморозка"
+	}	
+	"icestab_immun_Desc"
+	{
+		"en"	"AntiFrost"
+		"ru"	"АнтиЗаморозка"
+	}	
+	"pscout_Name"
+	{
+		"en"	"Poison Scout"
+		"ru"	"Отравленный разведчик"
+	}	
+	"pscout_Desc"
+	{
+		"en"	"Poision damage from ssg08 or scout"
+		"ru"	"Шанс при попадании во врага из ssg08 или scout нанести ему отправляющий урон"
+	}	
+	"teledec_Name"
+	{
+		"en"	"Teleporter"
+		"ru"	"Телепортер"
+	}	
+	"teledec_Desc"
+	{
+		"en"	"Teleport to explode decoy position, if you stuck in textured, you teleported to old position"
+		"ru"	"Телепортирует вас туда, куда упала ваша decoy граната, если вы попадете в текстуры, то вернет вас обратно"
+	}
+	"master_Name"
+	{
+		"en"	"Air Master"
+		"ru"	"Мастерство"
+	}	
+	"master_Desc"
+	{
+		"en"	"Increases your Air Accelerate"
+		"ru"	"Улучшает ваше скольжение, по поверхностям"
+	}
+	
+	//Spawn Protect
+	
+	"Spawn Protect"
+	{
+		"en"	"{LIGHTGREEN}You will be protected during the {RED}5{LIGHTGREEN} seconds."
+		"ru"	"{LIGHTGREEN}Вы будете защищены в течении {RED}5{LIGHTGREEN} секунд."
+	}	
+	"Spawn Protect Remove"
+	{
+		"en"	"{LIGHTGREEN}Spawn Protect Removed"
+		"ru"	"{LIGHTGREEN}Вы больше не защищены."
+	}	
+	"Shop Pick Up Gold"
+	{
+		"#format"	"{1:d},{2:d}"
+		"en"	"{LIGHTGREEN} Your picked {LIGHTOLIVE}{2}{DEFAULT} gold"
+		"ru"	"{LIGHTGREEN} Вы подобрали {LIGHTOLIVE}{2}{DEFAULT}  золота"
+	}
+}

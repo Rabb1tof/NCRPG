@@ -1,0 +1,442 @@
+"Phrases"
+{
+	//Admin
+	
+	"No Access"
+	{
+		"en"	"{RED}No Access!"
+		"ru"	"{RED}У вас нет доступа!"
+	}
+	"Admin"
+	{
+		"en"	"{RED}Admin"
+		"ru"	"{RED}Админ"
+	}
+	"Please wait"
+	{
+		"en"	"{LIGHTGREEN}Please wait..."
+		"ru"	"{LIGHTGREEN}Пожалуйста, подождите..."
+	}
+	"You cannot use the admin area on the other!"
+	{
+		"en"	"You cannot use the admin area on the other!"
+		"ru"	"Вы не можете использовать админку на других!"
+	}
+	"Admin: take xp"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} XP from {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} XP у {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: set xp"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} XP a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} XP игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: add xp"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} XP a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} XP игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: take level"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} lvl. from {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} ур. у {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: set level"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} level a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} уровень игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: add level"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} lvl. a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} ур. игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: take credits"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} credits from {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} кредитов у {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: set credits"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} credits a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} кредитов игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: add credits"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} credits a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} кредитов игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: enable skill"
+	{
+		// {1} - Имя админа
+		// {2} - Имя навыка
+		"#format"	"{1:s},{2:s}"
+		"en"	"{GREEN}{1}{DEFAULT} has enabled {LIGHTGREEN}{2}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} включил {LIGHTGREEN}{2}{DEFAULT}."
+	}
+	"Admin: disable skill"
+	{
+		// {1} - Имя админа
+		// {2} - Имя навыка
+		"#format"	"{1:s},{2:s}"
+		"en"	"{GREEN}{1}{DEFAULT} has disabled {LIGHTGREEN}{2}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} отключил {LIGHTGREEN}{2}{DEFAULT}."
+	}
+	"Invalid skill"
+	{
+		"en"	"Invalid skill!"
+		"ru"	"Неправильный навык!"
+	}
+	
+	
+	"Logs: Admin: take xp"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) took {1} XP from {4} ({5})"
+		"ru"	"{2} ({3}) забрал {1} XP у {4} ({5})"
+	}
+	"Logs: Admin: set xp"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) set {1} XP a player {4} ({5})"
+		"ru"	"{2} ({3}) установил {1} XP игроку {4} ({5})"
+	}
+	"Logs: Admin: add xp"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) added {1} XP a player {4} ({5})"
+		"ru"	"{2} ({3}) добавил {1} XP игроку {4} ({5})"
+	}
+	"Logs: Admin: take level"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) took {1} lvl. from {4} ({5})"
+		"ru"	"{2} ({3}) забрал {1} ур. у {4} ({5})"
+	}
+	"Logs: Admin: set level"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) set {1} level a player {4} ({5})"
+		"ru"	"{2} ({3}) установил {1} уровень игроку {4} ({5})"
+	}
+	"Logs: Admin: add level"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) added {1} lvl. a player {4} ({5})"
+		"ru"	"{2} ({3}) добавил {1} ур. игроку {4} ({5})"
+	}
+	"Logs: Admin: take credits"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) took {1} credits from {4} ({5})"
+		"ru"	"{2} ({3}) забрал {1} кредитов у {4} ({5})"
+	}
+	"Logs: Admin: set credits"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) set {1} credits a player {4} ({5})"
+		"ru"	"{2} ({3}) установил {1} кредитов игроку {4} ({5})"
+	}
+	"Logs: Admin: add credits"
+	{
+		// {1} - Количество
+		// {2} - Админ
+		// {3} - SteamID админа
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) added {1} credits a player {4} ({5})"
+		"ru"	"{2} ({3}) добавил {1} кредитов игроку {4} ({5})"
+	}
+	"Logs: Admin: reset player"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Цель
+		// {4} - SteamID цели
+		"#format"	"{1:d},{2:N},{3:s},{4:N},{5:s}"
+		"en"	"{2} ({3}) reset player {4} ({5})"
+		"ru"	"{2} ({3}) обнулил игрока {4} ({5})"
+	}
+	// admin menu
+	
+	"Administration options for player"
+	{
+		"#format"	"{1:s}"
+		"en"	"Administration options for {1}"
+		"ru"	"Что вы хотите сделать с игроком {1}?"
+	}		
+	"adminXP"
+	{
+		"en"	"Increase/Decrease XP"
+		"ru"	"Выдать/забрать опыт"
+	}
+	"adminLvl"
+	{
+		"en"	"Increase/Decrease LVL"
+		"ru"	"Выдать/забрать уровень"
+	}	
+	"adminCredits"
+	{
+		"en"	"Increase/Decrease credits"
+		"ru"	"Выдать/забрать кредиты"
+	}	
+	"adminAbility"
+	{
+		"en"	"Increase/Decrease LVL ability"
+		"ru"	"Дать/забрать уровень скилла"
+	}	
+	"adminReset"
+	{
+		"en"	"Reset"
+		"ru"	"Обнулить"
+	}	
+	"The player you selected has left the server"
+	{
+		"en"	"The player you selected has left the server"
+		"ru"	"Выбранный игрок покинул сервер"
+	}	
+	"Choose player"
+	{
+		"en"	"Choose player:\n"
+		"ru"	"Выберите игрока:\n"
+	}	
+	"Administration xp options for player"
+	{
+		"#format"	"{1:s}"
+		"en"	"Administration xp options for {1}\n"
+		"ru"	"Что с опытом {1} вы хотите сделать?\n"
+	}
+	"Administration level options for player"
+	{
+		"#format"	"{1:s}"
+		"en"	"Administration level options for {1}\n"
+		"ru"	"Что с уровнем {1} вы хотите сделать?\n"
+	}	
+	"Administration credits options for player"
+	{
+		"#format"	"{1:s}"
+		"en"	"Administration credits options for {1}\n"
+		"ru"	"Что с кредитами {1} вы хотите сделать?\n"
+	}	
+	"Give 1000 XP"
+	{
+		"en"	"Give 1000 XP"
+		"ru"	"Дать 1000 XP"
+	}	
+	"Give 10000 XP"
+	{
+		"en"	"Give 10000 XP"
+		"ru"	"Дать 10000 XP"
+	}	
+	"Give 100000 XP"
+	{
+		"en"	"Give 100000 XP"
+		"ru"	"Дать 100000 XP"
+	}	
+	"Remove 1000 XP"
+	{
+		"en"	"Remove 1000 XP"
+		"ru"	"Забрать 1000 XP"
+	}	
+	"Remove 10000 XP"
+	{
+		"en"	"Remove 10000 XP"
+		"ru"	"Забрать 10000 XP"
+	}	
+	"Remove 100000 XP"
+	{
+		"en"	"Remove 100000 XP"
+		"ru"	"Забрать 100000 XP"
+	}	
+	"Give 10000 Credits"
+	{
+		"en"	"Give 10000 credits"
+		"ru"	"Дать 10000 кредитов"
+	}	
+	"Give 100000 Credits"
+	{
+		"en"	"Give 100000 credits"
+		"ru"	"Дать 100000 кредитов"
+	}	
+	"Give 1000000 Credits"
+	{
+		"en"	"Give 1000000 credits"
+		"ru"	"Дать 1000000 кредитов"
+	}	
+	"Remove 10000 Credits"
+	{
+		"en"	"Remove 10000 credits"
+		"ru"	"Забрать 10000 кредитов"
+	}	
+	"Remove 100000 Credits"
+	{
+		"en"	"Remove 100000 credits"
+		"ru"	"Забрать 100000 кредитов"
+	}	
+	"Remove 1000000 Credits"
+	{
+		"en"	"Remove 1000000 credits"
+		"ru"	"Забрать 1000000 кредитов"
+	}
+	"Give 1 Level"
+	{
+		"en"	"Give 1 lvl"
+		"ru"	"Дать 1 уровень"
+	}	
+	"Give 5 Levels"
+	{
+		"en"	"Give 5 lvl"
+		"ru"	"Дать 5 уровней"
+	}	
+	"Give 10 Levels"
+	{
+		"en"	"Give 10 lvl"
+		"ru"	"Дать 10 уровней"
+	}
+	"Remove 1 Level"
+	{
+		"en"	"Remove 1 lvl"
+		"ru"	"Забрать 1 уровень"
+	}	
+	"Remove 5 Levels"
+	{
+		"en"	"Remove 5 lvl"
+		"ru"	"Забрать 5 уровней"
+	}	
+	"Remove 10 Levels"
+	{
+		"en"	"Remove 10 lvl"
+		"ru"	"Забрать 10 уровней"
+	}	
+	"Vip: Select an action"
+	{
+		"en"	"Select an action:\n"
+		"ru"	"Выберите действие:\n"
+	}	
+	
+	"Admin: reset player"
+	{
+		"#format"	"{1:s}"
+		"en"	"{DEFAULT}Admin {GREEN}{1}{DEFAULT} resets {LIGHTGREEN} you{DEFAULT}."
+		"ru"	"{DEFAULT}Админ {GREEN}{1}{DEFAULT} обнулил {LIGHTGREEN}вас{DEFAULT}."
+	}
+	"Vip take level amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You take own{GREEN}{1}{DEFAULT} levels."
+		"ru"	"{DEFAULT}Вы забрали у себя {GREEN}{1}{DEFAULT} уровней."
+	}
+	"Vip take credits amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You take own{GREEN}{1}{DEFAULT} credits."
+		"ru"	"{DEFAULT}Вы забрали у себя {GREEN}{1}{DEFAULT} кредитов."
+	}
+	"Vip take xp amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You take own{GREEN}{1}{DEFAULT} xp."
+		"ru"	"{DEFAULT}Вы забрали у себя {GREEN}{1}{DEFAULT} опыта."
+	}	
+	"Vip add xp amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You add own{GREEN}{1}{DEFAULT} xp."
+		"ru"	"{DEFAULT}Вы дали себе {GREEN}{1}{DEFAULT} опыта."
+	}	
+	"Vip add level amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You add own{GREEN}{1}{DEFAULT} lvls."
+		"ru"	"{DEFAULT}Вы дали себе {GREEN}{1}{DEFAULT} уровней."
+	}	
+	"Vip add credits amount"
+	{
+		"#format"	"{1:d}"
+		"en"	"{DEFAULT}You add own{GREEN}{1}{DEFAULT} credits."
+		"ru"	"{DEFAULT}Вы дали себе {GREEN}{1}{DEFAULT} кредитов."
+	}	
+	"Vip: MainMenu"
+	{
+		"en"	"Vip menu"
+		"ru"	"Вип рпг меню\nВыберите действие:"
+	}
+}

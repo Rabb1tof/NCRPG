@@ -1,0 +1,27 @@
+"Phrases"
+{
+	"Spawn message your xp"
+	{
+		"#format" "{1:i},{2:i},{3:i}"
+		"en"	"Your have {RED}{1}{DEFAULT} level and your {LIGHTGREEN}{2}/{3}{DEFAULT} XP."
+		"ru"	"Вы на {RED}{1}{DEFAULT} уровне и имеете {LIGHTGREEN}{2}/{3}{DEFAULT} опыта."
+	}
+	"Your rank"
+	{
+		"#format" "{1:d},{2:d},{3:d},{4:d}"
+		"en"	"Your position in the top {PURPLE}{1}{DEFAULT}! You are at level {RED}{2}{DEFAULT}, {LIGHTGREEN}{3} {DEFAULT}XP and {LIGHTBLUE}{4} {DEFAULT}credits"
+		"ru"	"Ваша позиция в топе {PURPLE}{1} {DEFAULT}! Вы на уровне {RED}{2}{DEFAULT}, с {LIGHTGREEN}{3} {DEFAULT}XP, и {LIGHTBLUE}{4} {DEFAULT}кредитами"
+	}
+	"TOP Player"
+	{
+		"#format"	"{1:d},{2:s},{3:d},{4:d},{5:d}"
+		"en"	"[{1}] {2} [LVL: {3}, XP: {4}/{5}]"
+		"ru"	"[{1}] {2} [Ур.: {3}, Опыт: {4}/{5}]"
+	}
+	"TOP Players"
+	{
+		"#format"	"{1:d}"
+		"en"	"TOP {1} Players"
+		"ru"	"ТОП {1} Игроков"
+	}
+}

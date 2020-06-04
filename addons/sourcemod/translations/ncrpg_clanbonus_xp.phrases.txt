@@ -1,0 +1,20 @@
+"Phrases"
+{
+	"Welcome"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"Welcome {1}! Our clan name is {2}"
+		"ru"		"Привет {1}! Имя нашей группы {2}."
+	}
+	"Welcome_XP"
+	{
+		"#format"	"{1:s}"
+		"en"		"Player who are wearing this clantag will gain {1} percent of bonus XP"
+		"ru"		"Игрок, который установит этот клантег, будет получать дополнительный Бонус {1} проц. XP"
+	}
+	"Welcome_No_Bonus"
+	{
+		"en"		"Bonus for Player who are wearing this clantag don't set"
+		"ru"		"Бонус для игрока установившего этот клантег, не назначен."
+	}
+}

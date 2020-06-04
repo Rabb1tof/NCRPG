@@ -1,0 +1,302 @@
+"Phrases"
+{
+	//Admin
+	"No Access"
+	{
+		"en"	"{RED}No Access!"
+		"ru"	"{RED}У вас нет доступа!"
+	}
+	"Admin"
+	{
+		"en"	"{RED}Admin"
+		"ru"	"{RED}Админ"
+	}
+	"Please wait"
+	{
+		"en"	"{LIGHTGREEN}Please wait..."
+		"ru"	"{LIGHTGREEN}Пожалуйста, подождите..."
+	}
+	"Admin: take xp"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} XP from {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} XP у {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: set xp"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} XP a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} XP игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: add xp"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} XP a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} XP игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: take level"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} lvl. from {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} ур. у {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: set level"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} level a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} уровень игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: add level"
+	{
+		// {1} - Цель
+		// {2} - Количество
+		// {3} - Имя админа
+		"#format"	"{1:N},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} lvl. a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} ур. игроку {GREEN}{1}{DEFAULT}."
+	}
+	
+	"Admin: take credits"
+	{
+		// {1} - Имя админа
+		// {2} - Количество
+		// {3} - Цель
+		"#format"	"{1:s},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} credits from {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} кредитов у {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: set credits"
+	{
+		// {1} - Имя админа
+		// {2} - Количество
+		// {3} - Цель
+		"#format"	"{1:s},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} credits a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} кредитов игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: add credits"
+	{
+		// {1} - Имя админа
+		// {2} - Количество
+		// {3} - Цель
+		"#format"	"{1:s},{2:d},{3:s}"
+		"en"	"{GREEN}{3}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} credits a player {GREEN}{1}{DEFAULT}."
+		"ru"	"{GREEN}{3}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} кредитов игроку {GREEN}{1}{DEFAULT}."
+	}
+	"Admin: take upgrade"
+	{
+		// {1} - Имя админа
+		// {2} - Количество
+		// {3} - Краткое имя скилла
+		// {4} - Цель
+		"#format"	"{1:s},{2:d},{3:s},{4:s}"
+		"en"	"{GREEN}{1}{DEFAULT} took {LIGHTGREEN}{2}{DEFAULT} level skill {PURPLE}{3}{DEFAULT} a player {GREEN}{4}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} забрал {LIGHTGREEN}{2}{DEFAULT} уровней скилла {PURPLE}{3}{DEFAULT} у игрока {GREEN}{4}{DEFAULT}."
+	}
+	"Admin: set upgrade"
+	{
+		// {1} - Имя админа
+		// {2} - Количество
+		// {3} - Краткое имя скилла
+		// {4} - Цель
+		"#format"	"{1:s},{2:d},{3:s},{4:s}"
+		"en"	"{GREEN}{1}{DEFAULT} set {LIGHTGREEN}{2}{DEFAULT} level skill {PURPLE}{3}{DEFAULT} a player {GREEN}{4}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} установил {LIGHTGREEN}{2}{DEFAULT} уровень скилла {PURPLE}{3}{DEFAULT} у игрока {GREEN}{4}{DEFAULT}."
+	}
+	"Admin: add upgrade"
+	{
+		// {1} - Имя админа
+		// {2} - Количество
+		// {3} - Краткое имя скилла
+		// {4} - Цель
+		"#format"	"{1:s},{2:d},{3:s},{4:s}"
+		"en"	"{GREEN}{1}{DEFAULT} added {LIGHTGREEN}{2}{DEFAULT} level skill {PURPLE}{3}{DEFAULT} a player {GREEN}{4}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} добавил {LIGHTGREEN}{2}{DEFAULT} уровней скилла {PURPLE}{3}{DEFAULT} игроку {GREEN}{4}{DEFAULT}."
+	}
+	"Admin: reset"
+	{
+		// {1} - Имя админа
+		// {2} - Цель
+		"#format"	"{1:s},{2:s}"
+		"en"	"{GREEN}{1}{DEFAULT} reset a player {GREEN}{2}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} обнулил игрока {GREEN}{2}{DEFAULT}."
+	}
+	"Admin: remove"
+	{
+		// {1} - Имя админа
+		// {2} - Цель
+		"#format"	"{1:s},{2:s}"
+		"en"	"{GREEN}{1}{DEFAULT} remove from DB a player {GREEN}{2}{DEFAULT}."
+		"ru"	"{GREEN}{1}{DEFAULT} удалил из БД игрока {GREEN}{2}{DEFAULT}."
+	}
+	"Logs: Admin: take xp"
+	{
+	// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) took {3} XP from {4} ({5})"
+		"ru"	"{1} ({2}) забрал {3} XP у {4} ({5})"
+	}
+	"Logs: Admin: set xp"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) set {3} XP a player {4} ({5})"
+		"ru"	"{1} ({2}) установил {3} XP игроку {4} ({5})"
+	}
+	"Logs: Admin: add xp"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) added {3} XP a player {4} ({5})"
+		"ru"	"{1} ({2}) добавил {3} XP игроку {4} ({5})"
+	}
+	"Logs: Admin: take level"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) took {3} lvl. from {4} ({5})"
+		"ru"	"{1} ({2}) забрал {3} ур. у {4} ({5})"
+	}
+	"Logs: Admin: set level"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) set {3} level a player {4} ({5})"
+		"ru"	"{1} ({2}) установил {3} уровень игроку {4} ({5})"
+	}
+	"Logs: Admin: add level"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) added {3} lvl. a player {4} ({5})"
+		"ru"	"{1} ({2}) добавил {3} ур. игроку {4} ({5})"
+	}
+	"Logs: Admin: take credits"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) took {3} credits from {4} ({5})"
+		"ru"	"{1} ({2}) забрал {3} кредитов у {4} ({5})"
+	}
+	"Logs: Admin: set credits"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) set {3} credits a player {4} ({5})"
+		"ru"	"{1} ({2}) установил {3} кредитов игроку {4} ({5})"
+	}
+	"Logs: Admin: add credits"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s}"
+		"en"	"{1} ({2}) added {3} credits a player {4} ({5})"
+		"ru"	"{1} ({2}) добавил {3} кредитов игроку {4} ({5})"
+	}
+	"Logs: Admin: take upgrade"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Краткое имя скилла
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s},{6:s}"
+		"en"	"{1} ({2}) took levels {3} skill {4} a player {5} ({6})"
+		"ru"	"{1} ({2}) забрал {3} уровеней скилла {4} у игрока {5} ({6})"
+	}
+	"Logs: Admin: set upgrade"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Краткое имя скилла
+		// {4} - Цель
+		// {5} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s},{6:s}"
+		"en"	"{1} ({2}) set levels {3} skill {4} a player {5} ({6})"
+		"ru"	"{1} ({2}) установил {3} уровень скилла {4} игроку {5} ({6})"
+	}
+	"Logs: Admin: add upgrade"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Количество
+		// {4} - Краткое имя скилла
+		// {5} - Цель
+		// {6} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:d},{4:s},{5:s},{6:s}"
+		"en"	"{1} ({2}) added levels {3} skill {4} a player {5} ({6})"
+		"ru"	"{1} ({2}) добавил {3} уровней скилла {4} игроку {5} ({6})"
+	}
+	"Logs: Admin: reset"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Цель
+		// {4} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:s},{4:s}"
+		"en"	"{1} ({2}) reset a player {3} ({4})"
+		"ru"	"{1} ({2}) обнулил игрока {3} ({4})"
+	}
+	"Logs: Admin: remove"
+	{
+		// {1} - Админ
+		// {2} - SteamID админа
+		// {3} - Цель
+		// {4} - SteamID цели
+		"#format"	"{1:s},{2:s},{3:s},{4:s}"
+		"en"	"{1} ({2}) remove from DB a player {3} ({4})"
+		"ru"	"{1} ({2}) удалил из БД игрока {3} ({4})"
+	}
+}

@@ -1,0 +1,16 @@
+"Phrases"
+{
+	"NCRPG_CREDITS"
+	{
+		"#format"	"{1:s}"
+		"ru"	"NCRPG Кредиты - {1}."
+		"en"	"NCRPG Credits - {1}."
+	}
+
+	"USE_KEY_CREDITS_ADD"
+	{
+		"#format"	"{1:d}"
+		"ru"	"Вы активировали ключ на {LIGHTGREEN}{1}{DEFAULT} кредитов!"
+		"en"	"Your activated key at {LIGHTGREEN}{1}{DEFAULT} credits!"
+	}
+}
