@@ -33,7 +33,7 @@ public void OnMapStart() {
 
 public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int victim = GetClientOfUserId(event.GetInt("userid"));
 	float deathvec[3];float gainhpvec[3];
 	for (int i = 1; i <= MaxClients; i++)

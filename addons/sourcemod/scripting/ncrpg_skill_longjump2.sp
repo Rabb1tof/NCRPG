@@ -43,7 +43,7 @@ public void OnMapStart()
 
 public Action OnPlayerRunCmd(int client,int &buttons,int &impulse, float vel[3],float angles[3],int &weapon)
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	static int s_iLastButtons[MAXPLAYERS+1] = {0,...};
 	if(!IsValidPlayer(client,true)) return Plugin_Continue;
 	

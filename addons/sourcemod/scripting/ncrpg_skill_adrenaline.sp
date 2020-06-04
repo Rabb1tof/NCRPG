@@ -16,7 +16,16 @@ public Plugin myinfo = {
 	version		= VERSION
 };
 
-public void OnPluginStart() { if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) NCRPG_OnRegisterSkills(); }
+public void OnPluginStart() { if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1)
+	{
+		for(int i = 1; i <= MaxClients; ++i)
+		if(IsValidPlayer(i))
+		{
+			OnClientPutInServer(i);
+		}
+		NCRPG_OnRegisterSkills(); 
+	}
+}
 
 public void OnPluginEnd() { if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) != -1) NCRPG_DisableSkill(ThisSkillID, true); }
 
@@ -33,7 +42,7 @@ public void OnMapStart() {
 public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDamage, OnTakeDamage); }
 
 public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype) {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && g_hPlayerIsAdrenalined[victim]==INVALID_HANDLE)
 	{
 		if(GetClientTeam(victim) == GetClientTeam(attacker)) return Plugin_Continue;

@@ -38,14 +38,15 @@ public void OnMapStart() {
 }
 
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 	if(level > 0) if(GetRandomFloat(0.0, 100.0) <= cfg_fPercent*level) GivePlayerItem(client,"weapon_taser");
+	//if(level > 0) GivePlayerItem(client,"weapon_taser");
 }
 
 public Action Event_WeaponFire(Event event, const char[] name, bool dontBroadcast) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int client = GetClientOfUserId(event.GetInt("userid"));
 	if(IsValidPlayer(client,true))
 	{

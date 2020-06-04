@@ -32,7 +32,7 @@ public void OnMapStart() {
 
 
 public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_value) {
-	if(skillid != ThisSkillID || NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange)
+	if(skillid != ThisSkillID || !NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange)
 		return;
 	
 	if(IsValidPlayer(client, true) && new_value> old_value)

@@ -29,9 +29,9 @@ public void OnMapStart() {
 
 public Action NCRPG_OnSkillActivatePre(int skillid,int caller,int target)
 {
-	IceStabSkillID = IceStabSkillID;
+	//IceStabSkillID = IceStabSkillID;
 	if(skillid!=IceStabSkillID) return Plugin_Continue;
-	if(NCRPG_IsValidSkill(ThisSkillID) || NCRPG_IsValidSkill(IceStabSkillID)) return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID) || !NCRPG_IsValidSkill(IceStabSkillID)) return Plugin_Continue;
 	int level = NCRPG_GetSkillLevel(target, ThisSkillID);
 	if(level==0) return Plugin_Continue;
 	if(GetRandomFloat(0.0,100.0) <= level*cfg_fChance) {

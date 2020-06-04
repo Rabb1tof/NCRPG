@@ -28,7 +28,7 @@ public void OnMapStart() {
 	NCRPG_Configs RPG_Configs = NCRPG_Configs(ThisSkillShortName,CONFIG_SKILL);
 	cfg_fChance = RPG_Configs.GetFloat(ThisSkillShortName,"chance",0.3);
 	cfg_fRange = RPG_Configs.GetFloat(ThisSkillShortName,"range",130.0);
-	cfg_fRange = RPG_Configs.GetFloat(ThisSkillShortName,"damage",0.018);
+	cfg_fDamage = RPG_Configs.GetFloat(ThisSkillShortName,"damage",0.018);
 	cfg_bEffects = RPG_Configs.GetInt(ThisSkillShortName,"effects",0)?true:false;
 	RPG_Configs.SaveConfigFile(ThisSkillShortName,CONFIG_SKILL);
 	if(cfg_bEffects){
@@ -42,7 +42,7 @@ public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDama
 
 public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage,int &damagetype) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int level = NCRPG_GetSkillLevel(victim, ThisSkillID);
 	if(IsValidPlayer(victim,true) && level> 0 && victim &&damagetype & DMG_FALL && GetRandomFloat(0.0, 1.0) <= cfg_fChance*level)
 	{

@@ -44,7 +44,7 @@ public void OnMapStart() {
 
 public Action Event_Decoy(Event event, const char[] name, bool dontBroadcast)
 {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return Plugin_Continue;
 	int client = GetClientOfUserId(event.GetInt("userid"));
 	if(IsValidPlayer(client,true))
 	{

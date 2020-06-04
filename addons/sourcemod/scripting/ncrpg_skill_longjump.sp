@@ -51,7 +51,7 @@ public void OnMapStart()
 }
 
 public Action Event_PlayerJump(Event event, const char[] name, bool dontBroadcast) {
-	if(ThisSkillID == -1 || NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(ThisSkillID == -1 || !NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int client = GetClientOfUserId(event.GetInt("userid"));
 	if(IsValidPlayer(client, true))
 	{

@@ -28,7 +28,7 @@ public OnMapStart() {
 
 	NCRPG_Configs RPG_Configs = NCRPG_Configs(ThisSkillShortName,CONFIG_SKILL);
 	cfg_bStaticChance = RPG_Configs.GetInt(ThisSkillShortName,"static",1)?true:false;
-	if(cfg_bStaticChance) cfg_fChance = RPG_Configs.GetFloat(ThisSkillShortName,"chance",0.1);
+	if(!cfg_bStaticChance) cfg_fChance = RPG_Configs.GetFloat(ThisSkillShortName,"chance",0.1);
 	cfg_fPercent = RPG_Configs.GetFloat(ThisSkillShortName,"percent",0.05);
 	cfg_bEffects = RPG_Configs.GetInt(ThisSkillShortName,"effects",1)?true:false;
 	cfg_bRestrict = RPG_Configs.GetInt(ThisSkillShortName,"restrict",1)?true:false;
@@ -60,7 +60,7 @@ public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDama
 
 public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage,int &damagetype) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && victim != attacker)
 	{
 		if(GetClientTeam(victim) == GetClientTeam(attacker)) return Plugin_Continue;

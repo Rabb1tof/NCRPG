@@ -16,7 +16,15 @@ public Plugin myinfo = {
 };
 
 public void OnPluginStart() {
-	if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) NCRPG_OnRegisterSkills();
+	if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) 
+	{
+		for(int i = 1; i <= MaxClients; ++i)
+		if(IsValidPlayer(i))
+		{
+			OnClientPutInServer(i);
+		}
+		NCRPG_OnRegisterSkills();
+	}
 }
 
 public void OnPluginEnd() { if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) != -1) NCRPG_DisableSkill(ThisSkillID, true); }
@@ -42,27 +50,36 @@ public void OnMapStart() {
 public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDamage, OnTakeDamage); }
 
 public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype) {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	//PrintToChatAll("0");
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	//PrintToChatAll("1");
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && victim != attacker)
 	{	
+		//PrintToChatAll("2");
 		if(GetClientTeam(victim) == GetClientTeam(attacker))
 			return Plugin_Continue;
-		char buffer[PLATFORM_MAX_PATH*2];
-		GetClientWeapon(attacker, buffer, sizeof buffer);
-		bool wpn = IsPermittedWeapon(buffer);
-			
-		int level = NCRPG_GetSkillLevel(attacker, ThisSkillID);
-		if(level>0 && damage>=1.0 && !wpn && !cfg_bRestrict)
+		if(damagetype & DMG_BULLET > 0)
 		{
-			if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
-			float victimloc[3]; float attackerloc[3]; float fv[3];
-			GetClientEyePosition(victim, victimloc);
-			GetClientEyePosition(attacker, attackerloc);
-			MakeVectorFromPoints(attackerloc, victimloc, fv);
-			NormalizeVector(fv, fv);
-			ScaleVector(fv, cfg_fAmount*level);
-			TeleportEntity(victim, NULL_VECTOR, NULL_VECTOR, fv);
-			NCRPG_SkillActivated(ThisSkillID,victim);
+			char buffer[PLATFORM_MAX_PATH*2];
+			GetClientWeapon(attacker, buffer, sizeof buffer);
+			bool wpn = IsPermittedWeapon(buffer);
+			//PrintToChatAll("3");
+			int level = NCRPG_GetSkillLevel(attacker, ThisSkillID);
+			if(level>0 && damage>=1.0)
+			{
+				if(cfg_bRestrict && !wpn)
+					return Plugin_Continue;
+				//PrintToChatAll("4");
+				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+				float victimloc[3]; float attackerloc[3]; float fv[3];
+				GetClientEyePosition(victim, victimloc);
+				GetClientEyePosition(attacker, attackerloc);
+				MakeVectorFromPoints(attackerloc, victimloc, fv);
+				NormalizeVector(fv, fv);
+				ScaleVector(fv, cfg_fAmount*level);
+				TeleportEntity(victim, NULL_VECTOR, NULL_VECTOR, fv);
+				NCRPG_SkillActivated(ThisSkillID,victim);
+			}
 		}
 	}
 	return Plugin_Continue;

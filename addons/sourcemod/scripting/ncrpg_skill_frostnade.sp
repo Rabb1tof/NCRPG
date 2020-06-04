@@ -92,7 +92,7 @@ public void NCRPG_OnPlayerSpawn(int client) { KillAttackerTimers(client,false); 
 public void OnClientPutInServer(int client) { SDKHook(client, SDKHook_OnTakeDamage, OnTakeDamage); }
 
 public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &damage, int &damagetype) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return Plugin_Continue;
 	if(IsValidPlayer(victim) && IsValidPlayer(attacker) && victim != attacker)
 	{
 		if(GetClientTeam(victim) == GetClientTeam(attacker))

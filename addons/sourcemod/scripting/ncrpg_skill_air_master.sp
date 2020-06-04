@@ -17,7 +17,15 @@ public Plugin myinfo = {
 };
 
 public void OnPluginStart() { 
-	if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) NCRPG_OnRegisterSkills(); 
+	if((ThisSkillID = NCRPG_FindSkillByShortname(ThisSkillShortName)) == -1) 
+	{
+		for(int i = 1; i <= MaxClients; ++i)
+		if(IsValidPlayer(i))
+		{
+			OnClientPutInServer(i);
+		}
+		NCRPG_OnRegisterSkills(); 
+	}
 	hAirAcceleration = FindConVar("sv_airaccelerate"); 
 }
 
@@ -33,7 +41,7 @@ public void OnMapStart() {
 
 public void OnClientPutInServer(int client) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	if(IsValidPlayer(client)) SDKHook(client, SDKHook_PreThinkPost, Hook_PreThink); 
 }
 
@@ -44,7 +52,7 @@ public void Hook_PreThink(int client)
 	SetConVarInt(hAirAcceleration, hAirAcceleration.IntValue); 
 }
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 	if(level > 0)
 	{

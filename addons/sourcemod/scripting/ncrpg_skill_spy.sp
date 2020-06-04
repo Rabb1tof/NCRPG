@@ -41,7 +41,7 @@ public void OnMapStart() {
 }
 
 public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int victim = GetClientOfUserId(event.GetInt("userid"));
 	int attacker = GetClientOfUserId(event.GetInt("attacker"));
 	int level = NCRPG_GetSkillLevel(attacker, ThisSkillID);
@@ -49,14 +49,18 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) 
 	{
 		if(level>0)
 		{
+			//PrintToChatAll("0");
 			char buffer[PLATFORM_MAX_PATH*2];
 			GetClientWeapon(attacker, buffer, sizeof buffer);
 			bool wpn = IsPermittedWeapon(buffer);
 			if(cfg_bRestrict && !wpn) return Plugin_Continue; 
+			//PrintToChatAll("1");
 			if(GetRandomFloat(0.0, 1.0) <= cfg_fPercent*level)
 			{
+				//PrintToChatAll("2");
 				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled) return Plugin_Continue;
 				SetSpyModel(victim,attacker);
+				//PrintToChatAll("3");
 				NCRPG_SkillActivated(ThisSkillID, attacker);
 			}
 		}
@@ -82,5 +86,5 @@ void SetSpyModel(int victim,int attacker)
 	char buffer[PLATFORM_MAX_PATH];
 	GetClientModel(victim, buffer, sizeof(buffer));
 	SetEntityModel(attacker, buffer);
-	GetClientModel(attacker, buffer, sizeof(buffer));
+	//GetClientModel(attacker, buffer, sizeof(buffer));
 }
