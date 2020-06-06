@@ -1,10 +1,10 @@
 Handle hArraySlowTimers;
 Handle hArraySpeedTimers;
-Handle hTimerFreezing[MAXPLAYERS+1];	// Пусть живет
+Handle hTimerFreezing[MAXPLAYERS+1];	// Пусть живет // Пусть живет
 
 void ResetPlayerModification(client) {
 	SetMaxHP(client, 100);
-	SetEntityHealth(client,100);//???
+	SetEntityHealth(client,100); // Нужен на случай наследования игроком максимального хп прошлого игрока, если вдруг здоровье нового игрока не прокачано, случается лишь при первом спавне и если за 0.09 секунд он сумел получить лечение, или при SDKHook_GetMaxHealth с передачей туда MaxHP.
 	SetMaxSpeed(client, 1.0);
 	SetGravity(client, 1.0);
 	SetSlow(client, 0.0);
