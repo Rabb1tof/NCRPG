@@ -31,7 +31,7 @@ public void OnMapStart() {
 }
 
 public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_value) {
-	if(skillid != ThisSkillID || NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange) return;
+	if(skillid != ThisSkillID || !NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange) return;
 
 	if(hTimerRegenHP[client] == INVALID_HANDLE)
 	{
@@ -43,7 +43,7 @@ public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_
 public void OnClientConnected(int client) {	hTimerRegenHP[client] = INVALID_HANDLE; }
 
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	if(hTimerRegenHP[client] != INVALID_HANDLE)
 	{
 		KillTimer(hTimerRegenHP[client]);

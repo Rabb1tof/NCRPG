@@ -52,7 +52,7 @@ public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_
 
 
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) { }
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 	if(level > 0)
 	{

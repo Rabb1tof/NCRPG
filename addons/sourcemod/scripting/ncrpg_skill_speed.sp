@@ -30,7 +30,7 @@ public void OnMapStart() {
 }
 
 public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_value) {
-	if(skillid != ThisSkillID || NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange) return;
+	if(skillid != ThisSkillID || !NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange) return;
 	if(IsValidPlayer(client, true))
 	{
 		if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return;
@@ -43,7 +43,7 @@ public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_
 }
 
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 	if(level > 0)
 	{

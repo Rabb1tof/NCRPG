@@ -40,7 +40,7 @@ public void OnMapStart() {
 
 public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) 
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return Plugin_Continue;
 	int victim = GetClientOfUserId(event.GetInt("userid"));
 	int attacker = GetClientOfUserId(event.GetInt("attacker"));
 	if(IsValidPlayer(victim)&& IsValidPlayer(attacker))

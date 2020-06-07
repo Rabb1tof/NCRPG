@@ -28,7 +28,7 @@ public void OnMapStart() {
 }
 
 public Action NCRPG_OnSkillLevelChange(int client,int &skillid,int old_value,int &new_value) {
-	if(skillid != ThisSkillID || NCRPG_IsValidSkill(ThisSkillID) || !cfg_bLevelChange) return;
+	if(skillid != ThisSkillID || !NCRPG_IsValidSkill(ThisSkillID) || !cfg_bLevelChange) return;
 		
 	if(IsValidPlayer(client, true))
 	{
@@ -42,7 +42,7 @@ public Action NCRPG_OnSkillLevelChange(int client,int &skillid,int old_value,int
 }
 
 public void NCRPG_OnPlayerSpawnedPost(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 	if(level > 0)
 	{

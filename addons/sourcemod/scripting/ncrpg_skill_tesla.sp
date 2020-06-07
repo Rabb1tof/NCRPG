@@ -46,7 +46,7 @@ public void OnMapStart() {
 
 
 public Action NCRPG_OnSkillLevelChange(int client, &skillid,int old_value, &new_value) {
-	if(skillid != ThisSkillID || NCRPG_IsValidSkill(ThisSkillID)|| !cfg_bLevelChange) return;
+	if(skillid != ThisSkillID || !NCRPG_IsValidSkill(ThisSkillID) || !cfg_bLevelChange) return;
 	
 	if(hTimerTeslaCoil[client] == INVALID_HANDLE)		hTimerTeslaCoil[client] = CreateTimer(cfg_fInterval, Timer_TeslaCoil, client, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
 }
@@ -55,7 +55,7 @@ public void OnClientConnected(int client) {
 	hTimerTeslaCoil[client] = INVALID_HANDLE;
 }
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	if(hTimerTeslaCoil[client] != INVALID_HANDLE)
 	{
 		KillTimer(hTimerTeslaCoil[client]);

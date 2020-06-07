@@ -77,13 +77,13 @@ public Action OnPlayerRunCmd(int client,int &buttons,int &impulse, float vel[3],
 }
 
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return;
 	ResetJumpingState(client);
 }
 
 public void Event_OnPlayerFootstep(Event event, const char[] error, bool dontBroadcast)
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return;
 	int client = GetClientOfUserId(event.GetInt("userid"));
 	if(!IsValidPlayer(client)) return;
 	if (g_bPlayerJumped[client]) g_iFootstepCount[client]++;
@@ -113,7 +113,7 @@ void HasJumped(int client, float vVelocity[3])
 }
 public void Event_OnResetJump(Event event, const char[] error, bool dontBroadcast)
 {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return;
 	int client = GetClientOfUserId(event.GetInt("userid"));
 	if(!IsValidPlayer(client)) return;
 	ResetJumpingState(client);

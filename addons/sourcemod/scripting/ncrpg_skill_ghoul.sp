@@ -76,7 +76,7 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) 
 }
 
 public void NCRPG_OnPlayerSpawn(int client) {
-	if(NCRPG_IsValidSkill(ThisSkillID)) return;
+	if(!NCRPG_IsValidSkill(ThisSkillID)) return;
 	if(iHealth[client] > 0) NCRPG_SetMaxHP(client, MaxHpInternal[client]);
 }
 

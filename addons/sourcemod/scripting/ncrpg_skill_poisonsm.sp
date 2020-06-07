@@ -67,7 +67,7 @@ public Event_RoundStart(Event event, const char[] name, bool dontBroadcast)
 }
 
 public Event_SmokegrenadeDetonated(Event event, const char[] name, bool dontBroadcast) {
-	if(NCRPG_IsValidSkill(ThisSkillID))  return;
+	if(!NCRPG_IsValidSkill(ThisSkillID))  return;
 	int client = GetClientOfUserId(event.GetInt("userid"));
 	if(IsValidPlayer(client))
 	{
@@ -98,7 +98,7 @@ public Action Timer_PoisonInterval(Handle timer) {
 	for(i = GetArraySize(hArrayTimers)-1; i >= 0; --i)
 	{
 		GetArrayArray(hArrayTimers, i, array[0]);
-		if(array[timerHandle] == timer)	// не может содержать неправильный таймер
+		if(array[timerHandle] == timer)	// пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 			break;
 	}
 	
