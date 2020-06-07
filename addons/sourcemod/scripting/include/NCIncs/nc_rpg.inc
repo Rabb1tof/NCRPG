@@ -138,6 +138,7 @@ public __pl_nc_rpg_SetNTVOptional()
 	MarkNativeAsOptional("NCRPG_SetExp");
 	MarkNativeAsOptional("NCRPG_TakeExp");
 	MarkNativeAsOptional("NCRPG_ResetPlayer");
+	MarkNativeAsOptional("NCRPG_ResetAllPlayers");
 	MarkNativeAsOptional("NCRPG_OpenMenuMain");
 	MarkNativeAsOptional("NCRPG_OpenMenuHelp");
 	MarkNativeAsOptional("NCRPG_OpenMenuStats");

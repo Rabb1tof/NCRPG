@@ -149,6 +149,14 @@ forward void NCRPG_OnPlayerLevelUp(int client,int level);
 native void NCRPG_ResetPlayer(int client);
 
 /*
+ * Обнуление всех игроков
+ *
+ * @noparam 
+ * @noreturn
+ */
+native void NCRPG_ResetAllPlayers();
+
+/*
  * Вызывается до получения опыта игроком
  *
  * @param client индекс игрока.
