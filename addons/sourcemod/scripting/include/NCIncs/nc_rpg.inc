@@ -49,6 +49,7 @@ stock bool IsValidPlayer(int client, bool alive = false) {
 	return false;
 }
 
+stock bool IsValidClient(int iClient) { return (iClient > 0 && iClient <= MaxClients && IsClientInGame(iClient) && !IsFakeClient(iClient)); }
 
 stock bool GetClientSteamID(int client, String:auth[],int maxlen) 
 {

@@ -364,6 +364,23 @@ void ResetPlayer(int client, int xp = 0) {
 	SavePlayer(client);
 }
 
+void ResetAllPlayers(int xp = 0) {
+	for(int client = 0; client <= MaxClients; ++client)
+	{
+		if(IsValidClient(client))
+			ResetPlayer(client, xp);
+	}
+	
+	char query[128];
+	view_as<Database>(GetSQLHandle()).Format(query, sizeof(query), "DELETE FROM nc_rpg WHERE level <> 1 AND xp <> 0 AND credits <> %d;", cfg_iCreditsStart);
+	if(!SQL_FastQuery(GetSQLHandle(), query, sizeof(query)))
+	{
+		char error[255];
+		SQL_GetError(GetSQLHandle(), error, sizeof(error));
+		NCRPg_LogPrint(LogType_Error, error);
+	}
+}
+
 void ResetPlayerStats(int client) {
 	SetXP(client, 0);
 	SetReqXP(client, cfg_iExpStart);

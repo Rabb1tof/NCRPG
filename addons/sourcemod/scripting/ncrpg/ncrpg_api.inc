@@ -342,6 +342,10 @@ public int Native_ResetPlayer(Handle plugin, int numParams) {
 	ResetPlayer(GetNativeCell(1));
 }
 
+public int Native_ResetAllPlayers(Handle plugin, int numParams) {
+	ResetAllPlayers();
+}
+
 public int Native_EnableSkill(Handle plugin, int numParams) {
 	EnableSkill(GetNativeCell(1));
 }

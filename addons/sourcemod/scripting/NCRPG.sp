@@ -84,6 +84,7 @@ public APLRes AskPluginLoad2(Handle myself,bool late,char[] error,int err_max)
 	CreateNative("NCRPG_SetExp", 				Native_SetExp);
 	CreateNative("NCRPG_TakeExp", 			Native_TakeExp);
 	CreateNative("NCRPG_ResetPlayer", 		Native_ResetPlayer);
+	CreateNative("NCRPG_ResetAllPlayers",	Native_ResetAllPlayers);
 	CreateNative("NCRPG_LogMessage", 			Native_LogMessage);
 	CreateNative("NCRPG_GetDbHandle", 		Native_GetDbHandle);	
 	CreateNative("NCRPG_SkillActivate", 		Native_OnSkillActivatedPre);
