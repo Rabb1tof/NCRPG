@@ -166,5 +166,5 @@ addons/sourcemod/scripting/include/*
 *.exe
 *.sh
 
-*/spcomp
-*/spcomp64
+spcomp
+spcomp64
