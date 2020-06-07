@@ -11,7 +11,7 @@
 #include "NCRPG/NCRPG_Events.inc"
 #include "NCRPG/NCRPG_Logs.inc"
 
-#define VERSION_NUM "1.3.8.4"
+#define VERSION_NUM "1.3.8.5"
 
 public Plugin myinfo =
 {
