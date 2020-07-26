@@ -1,16 +1,65 @@
 "Phrases"
 {
-	"NCRPG_CREDITS"
+	"ERROR_INVALID_RACE"
 	{
-		"#format"	"{1:s}"
-		"ru"	"NCRPG Кредиты - {1}."
-		"en"	"NCRPG Credits - {1}."
+		"ru"	"Неверная раса!"
+		"en"	"Invalid race!"
 	}
 
-	"USE_KEY_CREDITS_ADD"
+	"ERROR_INVALID_AMONUT"
+	{
+		"ru"	"Неверное количество!"
+		"en"	"Invalid amount!"
+	}
+
+	"ERROR_HAS_OCCURRED"
+	{
+		"ru"	"Произошла ошибка!"
+		"en"	"An error has occurred!"
+	}
+
+	"XP"
+	{
+		"ru"	"Опыт"
+		"en"	"XP"
+	}
+
+	"CREDITS"
+	{
+		"ru"	"Кредиты"
+		"en"	"Credits"
+	}
+
+	"LVL"
+	{
+		"ru"	"Уровень"
+		"en"	"Level"
+	}
+
+	"CHAT_PREFIX"
+	{
+		"ru"	"[NCRPG] "
+		"en"	"[NCRPG]"
+	}
+
+	"YOU_RECEIVED_CREDITS"
 	{
 		"#format"	"{1:d}"
-		"ru"	"Вы активировали ключ на {LIGHTGREEN}{1}{DEFAULT} кредитов!"
-		"en"	"Your activated key at {LIGHTGREEN}{1}{DEFAULT} credits!"
+		"ru"	"Вы получили {1} кредитов!"
+		"en"	"You received {1} credits!"
+	}
+
+	"YOU_RECEIVED_LVL"
+	{
+		"#format"	"{1:d}"
+		"ru"	"Вы получили {1} уровней!"
+		"en"	"You received {1} levels!"
+	}
+
+	"YOU_RECEIVED_XP"
+	{
+		"#format"	"{1:d}"
+		"ru"	"Вы получили {1} опыта!"
+		"en"	"You received {1} xp!"
 	}
 }

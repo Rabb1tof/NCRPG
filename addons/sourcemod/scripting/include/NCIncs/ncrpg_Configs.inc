@@ -92,7 +92,7 @@ stock File CreateFile(const char[] path, const char[] mode = "w+")
 			Format(dir[i], sizeof(dir[]), "%s%s%s", dir[i-1],splitter, dir[i]);
 			
 		if(!DirExists(dir[i]))
-			if(!CreateDirectory(dir[i], 511)) NCRPG_LogMessage(LogType_Error,"Не удалось создать путь %s",dir[i]);
+			if(!CreateDirectory(dir[i], FPERM_O_EXEC|FPERM_U_READ|FPERM_U_WRITE)) NCRPG_LogMessage(LogType_Error,"Не удалось создать путь %s",dir[i]);
 	}
 	
 	return OpenFile(path, mode);
