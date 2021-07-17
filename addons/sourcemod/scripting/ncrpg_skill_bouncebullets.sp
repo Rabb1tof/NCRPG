@@ -70,7 +70,7 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 				if(cfg_bRestrict && !wpn)
 					return Plugin_Continue;
 				//PrintToChatAll("4");
-				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Continue;
 				float victimloc[3]; float attackerloc[3]; float fv[3];
 				GetClientEyePosition(victim, victimloc);
 				GetClientEyePosition(attacker, attackerloc);

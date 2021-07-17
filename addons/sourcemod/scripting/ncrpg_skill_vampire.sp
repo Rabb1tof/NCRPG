@@ -58,7 +58,7 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 		{
 			if(GetRandomFloat(0.0, 1.0) <= cfg_fChance*level)
 			{
-				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled) return Plugin_Handled;
+				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled) return Plugin_Continue;
 				NCRPG_Buffs RPG_Player = NCRPG_Buffs(attacker);
 				int val = GetClientHealth(attacker);
 				if(val >= RPG_Player.MaxHP) return Plugin_Continue;

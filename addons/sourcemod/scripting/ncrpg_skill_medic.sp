@@ -80,7 +80,7 @@ public Action Timer_medic(Handle timer, int client) {
 					GetClientAbsOrigin(i,TeamPos);
 					if(GetVectorDistance(ClientPos, TeamPos, false) <= Range)
 					{
-						if(NCRPG_SkillActivate(ThisSkillID,client,i)>= Plugin_Handled)return Plugin_Handled;
+						if(NCRPG_SkillActivate(ThisSkillID,client,i)>= Plugin_Handled)return Plugin_Continue;
 						NCRPG_Buffs(i).HealToMaxHP(level*cfg_iAmount);
 						if(cfg_bEffects)
 						{

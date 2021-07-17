@@ -137,7 +137,7 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 			if(IsAcitveWeaponKnife(attacker))
 				if(level > 0)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled) return Plugin_Changed;
 					float time = cfg_bStatTime?cfg_fTime:cfg_fTime*level;
 					
 					int array[Freezing];

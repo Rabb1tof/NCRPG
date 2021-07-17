@@ -65,7 +65,7 @@ public Action OnPlayerRunCmd(int client,int &buttons,int &impulse, float vel[3],
 	{
 		if(vVelocity[2] > g_fPreviousVelocity[client][2])
 		{
-			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Handled;
+			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Continue;
 			HasJumped(client, vVelocity);
 			g_bPlayerStartedJumping[client] = false;
 			NCRPG_SkillActivated(ThisSkillID,client);

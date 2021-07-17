@@ -63,7 +63,7 @@ public Action Event_WeaponFire(Event event, const char[] name, bool dontBroadcas
 					GetEntPropVector(client, Prop_Send, "m_vecOrigin", origin);
 					origin[2] += 50.0; AddInFrontOf(origin, angles, 5, origin);
 					int target = FindAliveTarget(client, origin, angles, target_pos);
-					if(NCRPG_SkillActivate(ThisSkillID,client,target)>= Plugin_Handled) return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,client,target)>= Plugin_Handled) return Plugin_Continue;
 					if (target > 0){ RocketAttack(client, origin, angles); }
 				}
 			}

@@ -58,7 +58,7 @@ public Action Event_PlayerJump(Event event, const char[] name, bool dontBroadcas
 		int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 		if(level > 0)
 		{
-			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Handled;
+			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Continue;
 			float velocity[3];
 			velocity[0] = GetEntDataFloat(client, m_vecVelocity_0)*cfg_fForce*level;
 			velocity[1] = GetEntDataFloat(client, m_vecVelocity_1)*cfg_fForce*level;

@@ -137,7 +137,7 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 			if(StrEqual(buffer, "hegrenade_projectile"))
 				if(level > 0)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Continue;
 					float time = cfg_bStatTime?cfg_fTime:cfg_fTime*level;
 					
 					int array[Freezing];

@@ -74,7 +74,7 @@ public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage
 		if(level>0 && damage>=1.0)
 		{
 			if(cfg_bStaticChance){
-				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+				if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Continue;
 				damage*= 1.0+cfg_fPercent*level;
 				NCRPG_SkillActivated(ThisSkillID,attacker);
 				return Plugin_Changed;
@@ -83,7 +83,7 @@ public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage
 			{
 				if(GetRandomFloat(0.0, 1.0) <= cfg_fChance*level)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Continue;
 					if(cfg_bEffects)
 					{
 						float pos[3]; GetClientAbsOrigin(victim, pos); pos[2] += 65.0;

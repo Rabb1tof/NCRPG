@@ -57,7 +57,7 @@ public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage
 			{
 				if(GetRandomFloat(0.0, 1.0) <= cfg_fPercent*level)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled) return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled) return Plugin_Continue;
 					if(cfg_bEffects)
 					{
 						float pos[3];

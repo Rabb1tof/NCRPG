@@ -52,7 +52,7 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast)
 			{
 				if(bDucking[attacker])
 				{
-					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Continue;
 					float GlobPos[3];
 					GetClientAbsOrigin(victim, GlobPos);
 					TeleportEntity(attacker, GlobPos, NULL_VECTOR, NULL_VECTOR);

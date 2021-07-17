@@ -50,7 +50,7 @@ public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage
 			int level = NCRPG_GetSkillLevel(victim, ThisSkillID);
 			if(level>0 && GetRandomFloat(0.0,100.0) < level*cfg_fChance)
 			{
-				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Handled;
+				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Continue;
 				float amount = (damage*level*cfg_fPercent);
 				if(amount>GetClientHealth(attacker)) amount = GetClientHealth(attacker)-amount-1;
 				NCRPG_DealDamage(attacker, RoundToNearest(amount), victim);

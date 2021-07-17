@@ -64,7 +64,7 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) 
 				
 				if(val)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID,attacker,victim)>= Plugin_Handled)return Plugin_Continue;
 					NCRPG_SetMaxHP(attacker, NCRPG_GetMaxHP(attacker)+val);
 					SetEntityHealth(attacker, GetClientHealth(attacker)+val);
 					NCRPG_SkillActivated(ThisSkillID,attacker);
