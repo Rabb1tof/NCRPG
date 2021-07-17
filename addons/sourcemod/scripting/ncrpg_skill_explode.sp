@@ -64,7 +64,7 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast) 
 				{
 					if( IsValidPlayer( i, true )&& (GetClientTeam(i)!=GetClientTeam(victim)))
 					{
-						if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled) return Plugin_Handled;
+						if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled) return Plugin_Continue;
 						GetClientAbsOrigin(i,pos_v);
 						float distance=GetVectorDistance(pos_a,pos_v);
 						if(distance>range) return Plugin_Continue;

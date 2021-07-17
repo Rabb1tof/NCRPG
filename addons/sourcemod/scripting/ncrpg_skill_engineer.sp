@@ -70,7 +70,7 @@ public Action Timer_engineer(Handle timer, any client) {
 					{
 						int armor = Client_GetArmor(i);
 						if(armor >= 100) return Plugin_Continue;
-						if(NCRPG_SkillActivate(ThisSkillID,client,i)>= Plugin_Handled) return Plugin_Handled;
+						if(NCRPG_SkillActivate(ThisSkillID,client,i)>= Plugin_Handled) return Plugin_Continue;
 						armor += level*cfg_iAmount;
 						if(armor > 100) armor = 100;
 						Client_SetArmor(i, armor);

@@ -140,7 +140,7 @@ public Action Timer_PoisonInterval(Handle timer) {
 				}
 				if(amount)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID, array[ownerIndex],client)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID, array[ownerIndex],client)>= Plugin_Handled)return Plugin_Continue;
 					NCRPG_DealDamage(client, amount, array[ownerIndex], DMG_POISON, "weapon_smokegrenade");
 					NCRPG_SkillActivated(ThisSkillID, array[ownerIndex]);
 				}

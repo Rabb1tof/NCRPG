@@ -52,7 +52,7 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast)
 			{
 				if (iRespAmount[victim] < cfg_iAmount)
 				{
-					if(NCRPG_SkillActivate(ThisSkillID, victim,attacker)>= Plugin_Handled)return Plugin_Handled;
+					if(NCRPG_SkillActivate(ThisSkillID, victim,attacker)>= Plugin_Handled)return Plugin_Continue;
 					DataPack pack = new DataPack();pack.WriteCell(victim);
 					if(cfg_bType){
 						float fRespPos[3];

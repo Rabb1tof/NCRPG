@@ -63,7 +63,7 @@ public Action Event_WeaponFire(Event event, const char[] name, bool dontBroadcas
 		if(!cfg_bRestrict) wpn =false;
 		if(!wpn)
 		{
-			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Handled;
+			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Continue;
 			int weapon = GetEntPropEnt(client, Prop_Data, "m_hActiveWeapon");
 			if(weapon != -1)
 			{

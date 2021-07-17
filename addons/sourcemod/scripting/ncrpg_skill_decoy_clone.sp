@@ -44,7 +44,7 @@ public Action Event_DecoyStarted(Event event, const char[] name, bool dontBroadc
 		int level = NCRPG_GetSkillLevel(client, ThisSkillID);
 		if(level>0 && GetRandomFloat(0.0,1.0) < level*cfg_fPercent)
 		{
-			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Handled;
+			if(NCRPG_SkillActivate(ThisSkillID,client,client)>= Plugin_Handled)return Plugin_Continue;
 			float pos[3];
 			pos[0] = event.GetFloat("x");
 			pos[1] = event.GetFloat("y");

@@ -49,7 +49,7 @@ public Action OnPlayerDeath(Event event, const char[] name, bool dontBroadcast)
 					GetClientAbsOrigin(victim,deathvec); GetClientAbsOrigin(i,gainhpvec);
 					if(GetVectorDistance(deathvec,gainhpvec)<=cfg_fRange*level)
 					{
-						if(NCRPG_SkillActivate(ThisSkillID,i,victim)>= Plugin_Handled)return Plugin_Handled;
+						if(NCRPG_SkillActivate(ThisSkillID,i,victim)>= Plugin_Handled)return Plugin_Continue;
 						NCRPG_Buffs(i).HealToMaxHP(amount);
 						NCRPG_SkillActivated(ThisSkillID,i);
 					}

@@ -81,7 +81,7 @@ public Action OnTakeDamage(int victim,int &attacker,int &inflictor,float &damage
 		{
 			if(level>0 && GetRandomFloat() < level*cfg_fPercent)
 			{
-				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Handled;
+				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Continue;
 				GetClientAbsOrigin(victim, fPlayerLocation[victim]);
 				GetClientAbsOrigin(attacker, fPlayerLocation[attacker]);
 				TeleportEntity(victim, fPlayerLocation[attacker], NULL_VECTOR, NULL_VECTOR);

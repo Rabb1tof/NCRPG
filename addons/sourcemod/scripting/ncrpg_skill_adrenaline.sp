@@ -51,7 +51,7 @@ public Action OnTakeDamage(int victim, int &attacker, int &inflictor, float &dam
 		{
 			if(GetRandomFloat(0.0, 1.0) <= cfg_fChance*level)
 			{
-				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled)return Plugin_Handled;
+				if(NCRPG_SkillActivate(ThisSkillID,victim,attacker)>= Plugin_Handled) return Plugin_Continue;
 				NCRPG_Buffs(victim).Speed = NCRPG_Buffs(victim).Speed+(level*cfg_fAmount);
 				g_hPlayerIsAdrenalined[victim]=CreateTimer(cfg_fInterval,Timer_OnAdrenalineStop,victim,TIMER_FLAG_NO_MAPCHANGE);
 			}
